@@ -56,7 +56,7 @@ jobs:
         env:
           PYTHONUTF8: "1"
         run: mva web-export --out web/public/data
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
@@ -124,7 +124,7 @@ jobs:
           python -m mv_analyzer dataset-qa
           python scripts/build_report_contract.py --check
           python -m mv_analyzer web-export --out web/public/data
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
