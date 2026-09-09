@@ -1,0 +1,2323 @@
+{
+  "schema_version": 2,
+  "kind": "mv-analyzer-report",
+  "generated_at": "2026-09-09T05:31:00Z",
+  "pipeline": {
+    "version": "0.2.0",
+    "git_commit": "unknown",
+    "feature_schema": "p5-formal-5f24d2adc7f4",
+    "source_features_sha256": "5704b0b0c42ba0149c094d6930bc44f126ac0277948bdae04727acce8aef334a",
+    "measurement_git_commit": null,
+    "measurement_status": "unverified"
+  },
+  "video": {
+    "video_id": "hrBjKBPNi1c",
+    "title": "聖人君子でありたい / 重音テトSV",
+    "channel": "しゃいと",
+    "upload_date": "20250418",
+    "duration_s": 130.0
+  },
+  "benchmark": {
+    "corpus_id": "extreme-reference-2026-07",
+    "label": "Extreme Reference Corpus v2026.07",
+    "sampling": "extreme-groups",
+    "domain": "all",
+    "n": 100,
+    "collected_at": "2026-07-21",
+    "collection_start": "2026-07-16",
+    "collection_end": "2026-07-21",
+    "corpus_sha256": "d8e96f72b2401951c884a51e4ec16510c4f695ee87b219d5f2af05ce9f22d91e",
+    "target_in_reference": true,
+    "warning": "descriptive-reference-only"
+  },
+  "features": [
+    {
+      "id": "duration_s",
+      "labels": {
+        "ko": "곡 길이(초)",
+        "en": "Duration (s)"
+      },
+      "category": "metadata",
+      "value": 130.0,
+      "z": -1.1262150475608779,
+      "percentile": 14.5,
+      "reference_median": 183.5,
+      "reference_mean": 179.75,
+      "reference_std": 44.17451188185332,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_num_scenes",
+      "labels": {
+        "ko": "씬 수",
+        "en": "Scene count"
+      },
+      "category": "editing",
+      "value": 48.0,
+      "z": -0.5082978856804956,
+      "percentile": 32.5,
+      "reference_median": 71.5,
+      "reference_mean": 68.94,
+      "reference_std": 41.19631536921718,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_avg_shot_len_s",
+      "labels": {
+        "ko": "샷 길이 평균(초)",
+        "en": "Average shot length (s)"
+      },
+      "category": "editing",
+      "value": 2.7,
+      "z": -0.29419770979570153,
+      "percentile": 57.5,
+      "reference_median": 2.5,
+      "reference_mean": 11.422300000000002,
+      "reference_std": 29.64774948811461,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_median_shot_len_s",
+      "labels": {
+        "ko": "샷 길이 중앙값(초)",
+        "en": "Median shot length (s)"
+      },
+      "category": "editing",
+      "value": 1.39,
+      "z": -0.288428050102678,
+      "percentile": 26.5,
+      "reference_median": 1.59,
+      "reference_mean": 9.950199999999997,
+      "reference_std": 29.678805500895752,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_min_shot_len_s",
+      "labels": {
+        "ko": "최단 샷(초)",
+        "en": "Shortest shot (s)"
+      },
+      "category": "editing",
+      "value": 0.53,
+      "z": -0.21255455892689948,
+      "percentile": 13.5,
+      "reference_median": 0.67,
+      "reference_mean": 5.773799999999999,
+      "reference_std": 24.670371816411688,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_max_shot_len_s",
+      "labels": {
+        "ko": "최장 샷(초)",
+        "en": "Longest shot (s)"
+      },
+      "category": "editing",
+      "value": 19.77,
+      "z": -0.17808869012166328,
+      "percentile": 69.5,
+      "reference_median": 13.45,
+      "reference_mean": 27.0506,
+      "reference_std": 40.881877423132124,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_cuts_per_minute",
+      "labels": {
+        "ko": "분당 컷 수",
+        "en": "Cuts per minute"
+      },
+      "category": "editing",
+      "value": 22.2,
+      "z": -0.012074505324695377,
+      "percentile": 42.5,
+      "reference_median": 24.0,
+      "reference_mean": 22.341999999999995,
+      "reference_std": 11.760316152212916,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_avg_brightness",
+      "labels": {
+        "ko": "화면 밝기",
+        "en": "Frame brightness"
+      },
+      "category": "visual",
+      "value": 0.39,
+      "z": -0.21366324876634485,
+      "percentile": 43.5,
+      "reference_median": 0.4145,
+      "reference_mean": 0.42993000000000003,
+      "reference_std": 0.18688286465056125,
+      "reference_n": 100
+    },
+    {
+      "id": "scene_avg_saturation",
+      "labels": {
+        "ko": "화면 채도",
+        "en": "Frame saturation"
+      },
+      "category": "visual",
+      "value": 0.316,
+      "z": -0.14477846604946962,
+      "percentile": 43.5,
+      "reference_median": 0.335,
+      "reference_mean": 0.33668,
+      "reference_std": 0.1428389218665557,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_bpm",
+      "labels": {
+        "ko": "BPM",
+        "en": "BPM"
+      },
+      "category": "audio",
+      "value": 117.5,
+      "z": -0.26023771051693706,
+      "percentile": 43.5,
+      "reference_median": 123.0,
+      "reference_mean": 124.16799999999999,
+      "reference_std": 25.622727723644104,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_rms_mean",
+      "labels": {
+        "ko": "RMS 에너지",
+        "en": "RMS energy"
+      },
+      "category": "audio",
+      "value": 0.2178,
+      "z": -0.3816357567957359,
+      "percentile": 28.5,
+      "reference_median": 0.25355000000000005,
+      "reference_mean": 0.24214299999999997,
+      "reference_std": 0.06378595183110464,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_rms_std",
+      "labels": {
+        "ko": "에너지 변동",
+        "en": "Energy variation"
+      },
+      "category": "audio",
+      "value": 0.0833,
+      "z": -0.6376912896691781,
+      "percentile": 28.0,
+      "reference_median": 0.10494999999999999,
+      "reference_mean": 0.104547,
+      "reference_std": 0.03331862978875332,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_spectral_centroid_hz",
+      "labels": {
+        "ko": "스펙트럼 중심(Hz)",
+        "en": "Spectral centroid (Hz)"
+      },
+      "category": "audio",
+      "value": 2803.0,
+      "z": 0.5821697951883896,
+      "percentile": 76.5,
+      "reference_median": 2612.0,
+      "reference_mean": 2541.26,
+      "reference_std": 449.59391944286796,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_onsets_per_sec",
+      "labels": {
+        "ko": "온셋 밀도(/초)",
+        "en": "Onset density (/s)"
+      },
+      "category": "audio",
+      "value": 4.42,
+      "z": 1.2833522231114962,
+      "percentile": 92.5,
+      "reference_median": 3.355,
+      "reference_mean": 3.3127,
+      "reference_std": 0.8628184687406731,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_peak_energy_ratio",
+      "labels": {
+        "ko": "피크 위치(비율)",
+        "en": "Peak position ratio"
+      },
+      "category": "audio",
+      "value": 0.848,
+      "z": 0.9977412807949083,
+      "percentile": 83.0,
+      "reference_median": 0.6875,
+      "reference_mean": 0.6064700000000001,
+      "reference_std": 0.2420767834799529,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_lufs_i",
+      "labels": {
+        "ko": "라우드니스(LUFS)",
+        "en": "Loudness (LUFS)"
+      },
+      "category": "audio",
+      "value": -13.1,
+      "z": -0.24507894746897885,
+      "percentile": 28.5,
+      "reference_median": -11.7,
+      "reference_mean": -12.485999999999997,
+      "reference_std": 2.505315149836443,
+      "reference_n": 100
+    },
+    {
+      "id": "audio_lra_lu",
+      "labels": {
+        "ko": "라우드니스 범위(LU)",
+        "en": "Loudness range (LU)"
+      },
+      "category": "audio",
+      "value": 3.5,
+      "z": -0.6925869477737668,
+      "percentile": 23.5,
+      "reference_median": 4.8,
+      "reference_mean": 5.642999999999998,
+      "reference_std": 3.0941963415400773,
+      "reference_n": 100
+    },
+    {
+      "id": "tag_closeup_ratio",
+      "labels": {
+        "ko": "클로즈업 비율",
+        "en": "Close-up ratio"
+      },
+      "category": "visual",
+      "value": 0.729,
+      "z": 1.2592424841964847,
+      "percentile": 86.5,
+      "reference_median": 0.3835,
+      "reference_mean": 0.42446,
+      "reference_std": 0.24184380992698573,
+      "reference_n": 100
+    },
+    {
+      "id": "tag_wide_ratio",
+      "labels": {
+        "ko": "와이드샷 비율",
+        "en": "Wide-shot ratio"
+      },
+      "category": "visual",
+      "value": 0.125,
+      "z": -0.9183110264430028,
+      "percentile": 22.5,
+      "reference_median": 0.3285,
+      "reference_mean": 0.33576999999999996,
+      "reference_std": 0.22951918677966773,
+      "reference_n": 100
+    },
+    {
+      "id": "tag_avg_characters",
+      "labels": {
+        "ko": "평균 등장인물 수",
+        "en": "Avg. characters"
+      },
+      "category": "visual",
+      "value": 0.9,
+      "z": -0.43960072972870595,
+      "percentile": 19.0,
+      "reference_median": 1.35,
+      "reference_mean": 2.0238,
+      "reference_std": 2.556410679057651,
+      "reference_n": 100
+    },
+    {
+      "id": "tag_lyrics_text_ratio",
+      "labels": {
+        "ko": "가사 텍스트 씬 비율",
+        "en": "Lyric-text scene ratio"
+      },
+      "category": "lyrics",
+      "value": 0.812,
+      "z": 0.9585088940582078,
+      "percentile": 76.5,
+      "reference_median": 0.444,
+      "reference_mean": 0.47015000000000007,
+      "reference_std": 0.356647707829449,
+      "reference_n": 100
+    },
+    {
+      "id": "lyrics_n_lyric_lines",
+      "labels": {
+        "ko": "가사 라인 수",
+        "en": "Lyric line count"
+      },
+      "category": "lyrics",
+      "value": 26.0,
+      "z": -0.601265985248765,
+      "percentile": 32.0,
+      "reference_median": 38.0,
+      "reference_mean": 41.66,
+      "reference_std": 26.04504559412404,
+      "reference_n": 100
+    },
+    {
+      "id": "lyrics_lyric_lines_per_min",
+      "labels": {
+        "ko": "분당 가사 라인",
+        "en": "Lyric lines per minute"
+      },
+      "category": "lyrics",
+      "value": 12.0,
+      "z": -0.23796412297342484,
+      "percentile": 45.5,
+      "reference_median": 13.6,
+      "reference_mean": 13.876000000000003,
+      "reference_std": 7.8835413362270135,
+      "reference_n": 100
+    },
+    {
+      "id": "lyrics_first_lyric_at_s",
+      "labels": {
+        "ko": "첫 가사 시점(초)",
+        "en": "First lyric time (s)"
+      },
+      "category": "lyrics",
+      "value": 0.0,
+      "z": -0.846870031840813,
+      "percentile": 10.1,
+      "reference_median": 7.0,
+      "reference_mean": 10.343434343434344,
+      "reference_std": 12.213721060540031,
+      "reference_n": 99
+    },
+    {
+      "id": "lyrics_first_vocal_at_s",
+      "labels": {
+        "ko": "첫 보컬 시점(초)",
+        "en": "First vocal time (s)"
+      },
+      "category": "lyrics",
+      "value": 0.0,
+      "z": -0.6027417976361401,
+      "percentile": 12.6,
+      "reference_median": 8.0,
+      "reference_mean": 15.126436781609195,
+      "reference_std": 25.096047496511336,
+      "reference_n": 87
+    },
+    {
+      "id": "lyrics_text_frame_ratio",
+      "labels": {
+        "ko": "자막 프레임 비율",
+        "en": "Text-frame ratio"
+      },
+      "category": "lyrics",
+      "value": 0.338,
+      "z": 0.09718345102846031,
+      "percentile": 62.5,
+      "reference_median": 0.1405,
+      "reference_mean": 0.30761999999999995,
+      "reference_std": 0.3126046634329053,
+      "reference_n": 100
+    },
+    {
+      "id": "thumb_brightness",
+      "labels": {
+        "ko": "썸네일 밝기",
+        "en": "Thumbnail brightness"
+      },
+      "category": "packaging",
+      "value": 0.277,
+      "z": -1.0127668459892099,
+      "percentile": 18.5,
+      "reference_median": 0.476,
+      "reference_mean": 0.4952,
+      "reference_std": 0.21544939080907144,
+      "reference_n": 100
+    },
+    {
+      "id": "thumb_saturation",
+      "labels": {
+        "ko": "썸네일 채도",
+        "en": "Thumbnail saturation"
+      },
+      "category": "packaging",
+      "value": 0.206,
+      "z": -0.8729715050442649,
+      "percentile": 19.5,
+      "reference_median": 0.3305,
+      "reference_mean": 0.35944,
+      "reference_std": 0.17576747822051725,
+      "reference_n": 100
+    },
+    {
+      "id": "thumb_num_characters",
+      "labels": {
+        "ko": "썸네일 인물 수",
+        "en": "Thumbnail character count"
+      },
+      "category": "packaging",
+      "value": 1.0,
+      "z": -0.6241243232415201,
+      "percentile": 28.0,
+      "reference_median": 1.0,
+      "reference_mean": 2.33,
+      "reference_std": 2.1309856874226067,
+      "reference_n": 100
+    },
+    {
+      "id": "title_len",
+      "labels": {
+        "ko": "제목 길이",
+        "en": "Title length"
+      },
+      "category": "packaging",
+      "value": 18.0,
+      "z": -0.99072746103265,
+      "percentile": 11.0,
+      "reference_median": 31.0,
+      "reference_mean": 34.5,
+      "reference_std": 16.654428840401582,
+      "reference_n": 100
+    },
+    {
+      "id": "title_bracket_segments",
+      "labels": {
+        "ko": "제목 괄호 수",
+        "en": "Title bracket segments"
+      },
+      "category": "packaging",
+      "value": 0.0,
+      "z": -0.4685212856658182,
+      "percentile": 40.0,
+      "reference_median": 0.0,
+      "reference_mean": 0.24,
+      "reference_std": 0.5122499389946279,
+      "reference_n": 100
+    },
+    {
+      "id": "title_exclaim_count",
+      "labels": {
+        "ko": "제목 느낌표",
+        "en": "Title exclamation count"
+      },
+      "category": "packaging",
+      "value": 0.0,
+      "z": -0.2581988897471612,
+      "percentile": 46.5,
+      "reference_median": 0.0,
+      "reference_mean": 0.1,
+      "reference_std": 0.3872983346207416,
+      "reference_n": 100
+    },
+    {
+      "id": "sync_cut_beat_offset_med_s",
+      "labels": {
+        "ko": "컷-비트 오프셋(초)",
+        "en": "Median cut-beat offset (s)"
+      },
+      "category": "synchronization",
+      "value": 0.115,
+      "z": -0.14532973666782462,
+      "percentile": 42.2,
+      "reference_median": 0.1205,
+      "reference_mean": 0.17537500000000003,
+      "reference_std": 0.41543459297664026,
+      "reference_n": 96
+    },
+    {
+      "id": "sync_cut_on_beat_ratio",
+      "labels": {
+        "ko": "정박 컷 비율",
+        "en": "On-beat cut ratio"
+      },
+      "category": "synchronization",
+      "value": 0.447,
+      "z": 0.14027520763462725,
+      "percentile": 63.0,
+      "reference_median": 0.40349999999999997,
+      "reference_mean": 0.42172916666666665,
+      "reference_std": 0.18015181555928197,
+      "reference_n": 96
+    },
+    {
+      "id": "sync_cut_accel_at_peak",
+      "labels": {
+        "ko": "피크 구간 컷 가속",
+        "en": "Cut acceleration at peak"
+      },
+      "category": "synchronization",
+      "value": 0.41,
+      "z": -1.1932843823798749,
+      "percentile": 13.0,
+      "reference_median": 1.0350000000000001,
+      "reference_mean": 1.0089583333333334,
+      "reference_std": 0.5019409808572008,
+      "reference_n": 96
+    },
+    {
+      "id": "sync_first_cut_s",
+      "labels": {
+        "ko": "첫 컷 시점(초)",
+        "en": "First cut time (s)"
+      },
+      "category": "synchronization",
+      "value": 0.67,
+      "z": -0.24118393887015302,
+      "percentile": 5.7,
+      "reference_median": 2.63,
+      "reference_mean": 8.145520833333334,
+      "reference_std": 30.995102196079294,
+      "reference_n": 96
+    },
+    {
+      "id": "sync_beats_per_cut",
+      "labels": {
+        "ko": "컷당 비트 수",
+        "en": "Beats per cut"
+      },
+      "category": "synchronization",
+      "value": 5.3,
+      "z": -0.26796312633780817,
+      "percentile": 50.5,
+      "reference_median": 5.199999999999999,
+      "reference_mean": 25.621000000000002,
+      "reference_std": 75.83506088215398,
+      "reference_n": 100
+    },
+    {
+      "id": "hook_cuts_first_15s",
+      "labels": {
+        "ko": "첫 15초 컷 수",
+        "en": "Cuts in first 15s"
+      },
+      "category": "hook",
+      "value": 10.0,
+      "z": 1.3392804651209023,
+      "percentile": 94.0,
+      "reference_median": 4.5,
+      "reference_mean": 4.89,
+      "reference_std": 3.8154816209752602,
+      "reference_n": 100
+    },
+    {
+      "id": "hook_energy_first_10s_ratio",
+      "labels": {
+        "ko": "첫 10초 에너지 비율",
+        "en": "First-10s energy ratio"
+      },
+      "category": "hook",
+      "value": 0.88,
+      "z": 0.9983793133616835,
+      "percentile": 83.0,
+      "reference_median": 0.609,
+      "reference_mean": 0.60003,
+      "reference_std": 0.2804244802081302,
+      "reference_n": 100
+    },
+    {
+      "id": "upload_hour",
+      "labels": {
+        "ko": "업로드 시각",
+        "en": "Upload hour"
+      },
+      "category": "metadata",
+      "value": 3.0,
+      "z": -0.46573953182460065,
+      "percentile": 49.0,
+      "reference_median": 3.0,
+      "reference_mean": 6.08,
+      "reference_std": 6.613138437988425,
+      "reference_n": 100
+    }
+  ],
+  "pca": {
+    "status": "available",
+    "observed_count": 11,
+    "coverage": 1.0,
+    "imputed_features": [],
+    "experimental_features": [
+      "lyrics_compression_ratio"
+    ],
+    "basis_id": "5b6c45d322366675483a03c16027ea94459b25f675872968c9974efa5d0a901e",
+    "reference_points": [
+      {
+        "video_id": "hrBjKBPNi1c",
+        "title": "聖人君子でありたい / 重音テトSV",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.5644253226741245,
+          -0.0632579519088658,
+          0.5209822385682731
+        ],
+        "display": [
+          -0.04540425351236009,
+          -0.01346665490496646,
+          0.14419574491829723
+        ]
+      },
+      {
+        "video_id": "icBDYkfxpMs",
+        "title": "ループザルーム feat. 初音ミク / \"Looping the Rooms\" ft. Hatsune Miku",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          0.187182905240297,
+          -0.5975292887552338,
+          1.5261095026384652
+        ],
+        "display": [
+          0.015057616554913908,
+          -0.1272048886260103,
+          0.42239155247325694
+        ]
+      },
+      {
+        "video_id": "OSeSYGiDf9w",
+        "title": "暴飲暴食P 「うそつきマカロン」feat. 重音テト",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -1.3748900593825166,
+          1.2055522561919425,
+          -0.09894679343852936
+        ],
+        "display": [
+          -0.11060073724557123,
+          0.2566437216846607,
+          -0.0273861669955489
+        ]
+      },
+      {
+        "video_id": "R401j1QAvEg",
+        "title": "スプリットダンス / 初音ミク・重音テト",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.21893471873835416,
+          -0.46692617281638216,
+          1.1111302881506906
+        ],
+        "display": [
+          -0.017611838223624054,
+          -0.09940147358033063,
+          0.30753497478431735
+        ]
+      },
+      {
+        "video_id": "8Cm-7oCq9HA",
+        "title": "[MV] TAK - ‘PPPP’ feat. 初音ミク、重音テト",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.7849626555222867,
+          0.0019544364063067573,
+          0.5526759946228821
+        ],
+        "display": [
+          -0.06314501135457862,
+          0.000416069756026153,
+          0.15296783813996323
+        ]
+      },
+      {
+        "video_id": "3iUgKH8c7p4",
+        "title": "いますぐ輪廻 / 初音ミク",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.2285651113891709,
+          -1.1572017883706687,
+          -0.11428702356354542
+        ],
+        "display": [
+          -0.018386539095069022,
+          -0.24635064318631109,
+          -0.031631985271760484
+        ]
+      },
+      {
+        "video_id": "Ce25e2hH8GQ",
+        "title": "春秋 feat. 紅月ナギ / ぬか暖簾［オリジナルMV］",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          10.18949714208846,
+          2.073156208906928,
+          2.539014069332071
+        ],
+        "display": [
+          0.8196770995513356,
+          0.44134339457685307,
+          0.7027399361857456
+        ]
+      },
+      {
+        "video_id": "uWMr16O_Aso",
+        "title": "目撃！テト31世🎉🎃🧟雨衣・重音テト",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.15055274646513675,
+          -0.6803661594833359,
+          0.05746460379413689
+        ],
+        "display": [
+          -0.012110964538406812,
+          -0.1448395972727555,
+          0.015904863423562766
+        ]
+      },
+      {
+        "video_id": "OreUrf87EUE",
+        "title": "我ら！ゴミ分別団／重音テト＆ずんだもん【SDGs Song】",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -1.3833033106318273,
+          2.076132611568433,
+          1.269589752218685
+        ],
+        "display": [
+          -0.11127752720739836,
+          0.441977025389916,
+          0.351392862384154
+        ]
+      },
+      {
+        "video_id": "eCjfSDz4eRo",
+        "title": "重音テトはこんなパーティ二人で抜け出せるのか／重音テトSV＆初音ミク",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.6533621987039119,
+          0.6930602664867166,
+          0.7507378463778909
+        ],
+        "display": [
+          -0.05255863214073578,
+          0.14754197939520433,
+          0.20778674392876048
+        ]
+      },
+      {
+        "video_id": "TbakFPc4ZTw",
+        "title": "怪獣になりたい / Sakuzyo feat. 初音ミク 【プロジェクトセカイChampionship 2025】【MV】",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.34878592085340293,
+          -0.38506445999594563,
+          1.1916651052406526
+        ],
+        "display": [
+          -0.02805750156095162,
+          -0.08197436120605565,
+          0.3298251357196677
+        ]
+      },
+      {
+        "video_id": "rv_SfZ2DVRA",
+        "title": "このサメ飼ってもいい？ - 初音ミク [せなすけ] Official MV",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.7077208138001403,
+          0.27195561259727025,
+          -0.10003627319463235
+        ],
+        "display": [
+          -0.05693142025151114,
+          0.05789520959503117,
+          -0.0276877096075128
+        ]
+      },
+      {
+        "video_id": "Dz5rALpx06M",
+        "title": "バゥムクゥヘン・エンドロゥル / 雨良 feat.初音ミクVS重音テトVS亞北ネル(Baumkuchen End Credits / Amala ft.Miku vs Teto vs Neru)",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.17776073003377413,
+          -0.7902137251246842,
+          0.4643710498227035
+        ],
+        "display": [
+          -0.014299665388428353,
+          -0.1682244716482941,
+          0.12852708689588369
+        ]
+      },
+      {
+        "video_id": "bmbAm-fKnbQ",
+        "title": "クローンクローン / GUMI, 鏡音リン",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -1.2830986849097619,
+          0.5497588767787154,
+          -0.5250836890941556
+        ],
+        "display": [
+          -0.10321673325180429,
+          0.11703529518607965,
+          -0.1453309308613928
+        ]
+      },
+      {
+        "video_id": "7Ucwpeg9iXM",
+        "title": "どりーむもーど / 音街ウナ, 歌愛ユキ",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.09633963170786011,
+          -1.0230526065873717,
+          -0.480091036742133
+        ],
+        "display": [
+          -0.0077498809596758325,
+          -0.21779232470862922,
+          -0.1328780130045786
+        ]
+      },
+      {
+        "video_id": "JAWrvTEPDLc",
+        "title": "クローバー♧クラブ -C♧C- / ゆうゆ feat.初音ミク (Clover Club -C&C- / Yuuyu feat.Hatsune Miku)",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.5601639757913729,
+          -0.49690056154973594,
+          -0.4287944246020242
+        ],
+        "display": [
+          -0.04506145657112458,
+          -0.10578256460333635,
+          -0.11868030595864323
+        ]
+      },
+      {
+        "video_id": "IxSvgPhdc8c",
+        "title": "弱者のマーチ / 重音テト",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.31129646391240834,
+          -0.2516277702563974,
+          0.26852045169012634
+        ],
+        "display": [
+          -0.02504172473696884,
+          -0.053567721437313344,
+          0.07432020458828241
+        ]
+      },
+      {
+        "video_id": "s4kAOHUSvT8",
+        "title": "トーストになっちゃった！！ / 足立レイ",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -2.7256490880999125,
+          3.38457476483889,
+          0.524797749037935
+        ],
+        "display": [
+          -0.2192602939844942,
+          0.7205244397385449,
+          0.1452517893161416
+        ]
+      },
+      {
+        "video_id": "ZxmqjmSCJOY",
+        "title": "ブラッドドール / 初音ミク",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -1.328128085089402,
+          0.7726677558302786,
+          0.22488697539476166
+        ],
+        "display": [
+          -0.10683904823154221,
+          0.16448920191016997,
+          0.06224347499558928
+        ]
+      },
+      {
+        "video_id": "W9eytW6iZKY",
+        "title": "V  / Kakuriyo feat.初音ミク+鏡音リン+重音テト+GUMI+flower",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -3.2958502330610986,
+          4.697376769158647,
+          3.127024790991698
+        ],
+        "display": [
+          -0.26512917388555285,
+          1.0,
+          0.8654876034817856
+        ]
+      },
+      {
+        "video_id": "7EYuHASt2Ks",
+        "title": "ᵇᵉˢᵗ ᶠʳⁱᴱᴺᴰ / 雨衣, 初音ミク",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -1.1563280514899774,
+          0.5054254033440146,
+          0.3496945064395474
+        ],
+        "display": [
+          -0.09301888112418528,
+          0.1075973736368058,
+          0.0967872916137406
+        ]
+      },
+      {
+        "video_id": "Jtm6ikBIl0g",
+        "title": "ピノキオピー - T氏の話を信じるな feat. 初音ミク・重音テト / Don’t Believe in T",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -1.1591553898655502,
+          0.6201320908610288,
+          0.6574481543294308
+        ],
+        "display": [
+          -0.09324632164326321,
+          0.13201668108306785,
+          0.18196633078935284
+        ]
+      },
+      {
+        "video_id": "cknsKkzA2lM",
+        "title": "サ終あざした / 重音テトSV",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.04973443150171748,
+          -0.43956379812896,
+          0.8005849919811492
+        ],
+        "display": [
+          -0.0040008033755438936,
+          -0.09357644058168466,
+          0.22158327240939643
+        ]
+      },
+      {
+        "video_id": "4LrRm2Kv0So",
+        "title": "リトライ！ / 初音ミク・重音テト - Retry!",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.5420100733278366,
+          -0.42565526095568973,
+          0.2531724119665124
+        ],
+        "display": [
+          -0.043601096171651574,
+          -0.09061552476488476,
+          0.07007222479714005
+        ]
+      },
+      {
+        "video_id": "7qAAg5WeB20",
+        "title": "halyosy - ダンロウグモ ft. KAITO, 鏡音レン [Official Video]",
+        "domain": "vocaloid",
+        "group": "top",
+        "score": [
+          -0.5571949393298812,
+          -0.041308924944721354,
+          0.4828315679322755
+        ],
+        "display": [
+          -0.0448226173859046,
+          -0.008794041222314012,
+          0.13363652818452104
+        ]
+      },
+      {
+        "video_id": "-FX7yWRFw9Y",
+        "title": "【Youtube登録5万人感謝曲】箱庭は続く / feat. DIORAMA×知声×可不",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          2.46094949328216,
+          -1.9136462834930548,
+          0.8288664463128546
+        ],
+        "display": [
+          0.19796697664929164,
+          -0.40738615987914684,
+          0.22941092001968755
+        ]
+      },
+      {
+        "video_id": "E0MpuPcY_1A",
+        "title": "【メリクリ】夜撫でるメノウ / Ayase feat.DIORAMA & GUMI SV",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          2.0824707650791456,
+          -1.9983882254163936,
+          1.1305471349976803
+        ],
+        "display": [
+          0.16752088673442272,
+          -0.42542642918003093,
+          0.31290910558532214
+        ]
+      },
+      {
+        "video_id": "h-ibHxT6xbY",
+        "title": "九月の妄想 September Delusion #horror #dreamcore #liminalspace",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          -0.5624426647036969,
+          -0.5198748181952375,
+          -1.5292986783061093
+        ],
+        "display": [
+          -0.04524476189938444,
+          -0.11067343407677152,
+          -0.4232742419913008
+        ]
+      },
+      {
+        "video_id": "SgmdoeayELI",
+        "title": "愛して愛して愛のザイシャ Love Me, Love Me, the Sin Named Zaisya #初音ミク #music #オリジナル曲",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          1.9426675878724637,
+          -2.419169526390979,
+          -1.132236998744535
+        ],
+        "display": [
+          0.15627465336266017,
+          -0.5150043620674437,
+          -0.31337682049717364
+        ]
+      },
+      {
+        "video_id": "aIIevDkXt2E",
+        "title": "快晴の扉を開けて / 初音ミク【イラスト統一祭2025】",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          1.1046105195474314,
+          -1.5269023190139792,
+          1.03632751789972
+        ],
+        "display": [
+          0.08885855054187247,
+          -0.3250542577378703,
+          0.28683131085916524
+        ]
+      },
+      {
+        "video_id": "LaceJI6HjpI",
+        "title": "明日、僕が消える前に / 雨良 feat.初音ミク (Tomorrow, before I disappear / Amala ft.Miku)",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.6362088381868474,
+          -2.1971745599989885,
+          0.4566680998827859
+        ],
+        "display": [
+          0.05117875866905001,
+          -0.46774501343491914,
+          0.12639508982875294
+        ]
+      },
+      {
+        "video_id": "CfGwxWa5dqM",
+        "title": "レイス / AI ナースロボ_タイプT × ナースロボ_タイプT",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          2.0500309369829948,
+          -2.300808761857229,
+          0.966313583035204
+        ],
+        "display": [
+          0.16491131887910981,
+          -0.4898071572549905,
+          0.26745308499067044
+        ]
+      },
+      {
+        "video_id": "mUTOHRgD-os",
+        "title": "【重音テト】ロックな心でぶっ壊せ【オリジナル】",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          6.947936072307561,
+          0.16418987407668492,
+          -2.67959892376939
+        ],
+        "display": [
+          0.5589151268410768,
+          0.03495352451919525,
+          -0.7416505483124257
+        ]
+      },
+      {
+        "video_id": "HWgwsHrNQU4",
+        "title": "BALLOON  -alternative- feat.TIARA",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          1.5936374371550786,
+          -1.8213807755383962,
+          0.6923315561400418
+        ],
+        "display": [
+          0.12819750513772296,
+          -0.38774423791103,
+          0.19162124363856728
+        ]
+      },
+      {
+        "video_id": "uXvbBt3o0GU",
+        "title": "【重音テト】何億光年と走り抜け",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          5.716836768274078,
+          -0.3186762130680252,
+          -1.5428107228062062
+        ],
+        "display": [
+          0.4598813970388811,
+          -0.06784131414800343,
+          -0.4270140610826676
+        ]
+      },
+      {
+        "video_id": "PvV3HZvv5a0",
+        "title": "Silent Destiny feat.てぃあら",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.4845899568066897,
+          -1.4919707734216396,
+          -0.5666886897793797
+        ],
+        "display": [
+          0.03898203068592274,
+          -0.3176178634887038,
+          -0.15684622566802367
+        ]
+      },
+      {
+        "video_id": "iFn15MwYJ9g",
+        "title": "【VocaDuo2025】ショコラマジック / チーム dolce m!ele",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          2.9390038260975504,
+          -1.706179519846329,
+          0.9068681853587977
+        ],
+        "display": [
+          0.23642325996591404,
+          -0.3632196444297409,
+          0.25099998397235135
+        ]
+      },
+      {
+        "video_id": "i-FD7IfSJ40",
+        "title": "歌流間 / 初音ミク MV",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          -0.904125423709846,
+          0.4971988427910997,
+          0.7111166226952534
+        ],
+        "display": [
+          -0.07273086145497594,
+          0.10584606413850715,
+          0.19682051237508402
+        ]
+      },
+      {
+        "video_id": "VRukT2CJTzQ",
+        "title": "Nýx / TOOBOE",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.17703482722136168,
+          -1.178880743056695,
+          0.4620325807540354
+        ],
+        "display": [
+          0.014241271347629552,
+          -0.2509657625926067,
+          0.12787985314324818
+        ]
+      },
+      {
+        "video_id": "h-m5Cs47sq0",
+        "title": "すているうぷ / 南ノ南 feat.東北きりたん",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.5715433892338883,
+          -1.454690631527349,
+          -0.24761996562416025
+        ],
+        "display": [
+          0.04597685450245416,
+          -0.30968148884252694,
+          -0.0685354370197782
+        ]
+      },
+      {
+        "video_id": "78F_I8MQLYM",
+        "title": "【鏡音レン・Yuma】ナイトメアディナータイム【オリジナルMV】",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.04646040293590359,
+          -0.3664119721949363,
+          0.020989497778423034
+        ],
+        "display": [
+          0.0037374296092772975,
+          -0.07800353052381719,
+          0.0058094039365682295
+        ]
+      },
+      {
+        "video_id": "zN4Y7tFF8BY",
+        "title": "「リトルシスター」40mP feat.彩澄しゅお,彩澄りりせ",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          -0.9289620726566752,
+          0.3265328062141225,
+          0.8952908639183559
+        ],
+        "display": [
+          -0.07472880424718903,
+          0.069513863217876,
+          0.24779565114547647
+        ]
+      },
+      {
+        "video_id": "yV5-Gk59p8o",
+        "title": "螟｢迴ｾ",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.8804804746642049,
+          -2.0221275576019724,
+          0.6416261088035606
+        ],
+        "display": [
+          0.07082878297332891,
+          -0.4304801715882284,
+          0.1775871572363276
+        ]
+      },
+      {
+        "video_id": "lhwV573qUlE",
+        "title": "暴飲暴食P「江戸前ビューティーサロン寿司美」feat. 可不",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          -0.2808367471929808,
+          0.16401909909117568,
+          2.4673854515042395
+        ],
+        "display": [
+          -0.02259144363814924,
+          0.034917169124705605,
+          0.6829148036945951
+        ]
+      },
+      {
+        "video_id": "0xEOpbQWb4c",
+        "title": "【オリジナル曲】僕はリーダーになれない｜─届かない場所へ手を伸ばして─",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          12.431111162756476,
+          4.582121161780024,
+          -1.7300750723630085
+        ],
+        "display": [
+          1.0,
+          0.975463835872108,
+          -0.47884446984130496
+        ]
+      },
+      {
+        "video_id": "-hgaSBzS_Z0",
+        "title": "見失ってしまった - 氷山キヨテルSV / But I Lost It - Hiyama Kiyoteru SV",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          1.1381305873166507,
+          -2.083982602401955,
+          0.01190767753581943
+        ],
+        "display": [
+          0.09155501647563752,
+          -0.4436481689279567,
+          0.0032957676968853986
+        ]
+      },
+      {
+        "video_id": "zLbH9iN7aSU",
+        "title": "海底の神社 ~ The Undersea Shrine",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          7.664166560889775,
+          2.8034279254405523,
+          -0.8135890641993283
+        ],
+        "display": [
+          0.6165310936846551,
+          0.5968071251697099,
+          -0.22518249660871803
+        ]
+      },
+      {
+        "video_id": "hfY9-ROVfvg",
+        "title": "カラフルファンデーション feat.初音ミク 【プロジェクトセカイ】",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          0.7438266474941607,
+          -1.7459476432356342,
+          0.15052652348855422
+        ],
+        "display": [
+          0.05983589381154118,
+          -0.3716856724584928,
+          0.04166223448239345
+        ]
+      },
+      {
+        "video_id": "X2CFrEDiDyY",
+        "title": "Pain / めろくる feat. 初音ミク",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          1.22263418587247,
+          -2.0133143997609775,
+          1.130775521463933
+        ],
+        "display": [
+          0.09835276749318063,
+          -0.4286039844578157,
+          0.31297231763785016
+        ]
+      },
+      {
+        "video_id": "JiE9drSO8nk",
+        "title": "星屑ジェットコースター - かめりあ feat.初音ミク【MV】 [From 初音ミク 夜空プログラム2025]",
+        "domain": "vocaloid",
+        "group": "bottom",
+        "score": [
+          -1.5055945315780197,
+          0.6813019812098811,
+          -0.7324026765678341
+        ],
+        "display": [
+          -0.1211150404711021,
+          0.14503881947113004,
+          -0.20271199612885415
+        ]
+      },
+      {
+        "video_id": "r1QapH1SIAI",
+        "title": "fromis_9 (프로미스나인) 'LIKE YOU BETTER' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.6748404542719593,
+          1.3293228746112584,
+          0.6977455361291759
+        ],
+        "display": [
+          -0.13472974638741625,
+          0.2829926020282497,
+          0.19311970715557955
+        ]
+      },
+      {
+        "video_id": "Qe8fa4b5xNU",
+        "title": "화사 (HWASA) - 'Good Goodbye' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.9724785905180493,
+          0.42448512300796654,
+          0.7159716483899695
+        ],
+        "display": [
+          -0.07822941793261318,
+          0.09036642021031593,
+          0.1981642703668554
+        ]
+      },
+      {
+        "video_id": "5ZB9JLfIw_Q",
+        "title": "fromis_9 (프로미스나인) '하얀 그리움' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.1379680242073902,
+          0.40380871899496273,
+          -0.15619308568847734
+        ],
+        "display": [
+          -0.09154193935749964,
+          0.08596472857920004,
+          -0.04323060687026844
+        ]
+      },
+      {
+        "video_id": "HnYtDIW7elY",
+        "title": "ZEROBASEONE (제로베이스원) 'ICONIK' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.0319176835344248,
+          0.9194944332258846,
+          0.5086861320060941
+        ],
+        "display": [
+          -0.08301089661445898,
+          0.1957463661980379,
+          0.14079246911718601
+        ]
+      },
+      {
+        "video_id": "wLKpQpC3-Sw",
+        "title": "izna 'BEEP' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.0642157110269865,
+          0.6615804483865333,
+          -0.17389581821193095
+        ],
+        "display": [
+          -0.08560905755676688,
+          0.1408404053790707,
+          -0.04813031076482692
+        ]
+      },
+      {
+        "video_id": "NBZgirj_C2Y",
+        "title": "XLOV 엑스러브 '1&Only' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.4308501008398904,
+          0.5471277534181098,
+          -1.1958466985427776
+        ],
+        "display": [
+          -0.1151023494284813,
+          0.1164751690795513,
+          -0.33098250331592644
+        ]
+      },
+      {
+        "video_id": "2fyFx2u5fbU",
+        "title": "izna 'Mamma Mia' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.6570195570607105,
+          0.22826187017771007,
+          -0.2698210803264516
+        ],
+        "display": [
+          -0.05285284223257021,
+          0.04859347703944011,
+          -0.07468018829059131
+        ]
+      },
+      {
+        "video_id": "wlHwjkYpSr0",
+        "title": "BABYMONSTER - ‘WE GO UP’ M/V",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.9309996209549785,
+          -0.2283257271232805,
+          -0.8102432241276818
+        ],
+        "display": [
+          -0.074892711421023,
+          -0.04860707121097638,
+          -0.22425644603387615
+        ]
+      },
+      {
+        "video_id": "yd_uG3TtREs",
+        "title": "BABYMONSTER - ‘PSYCHO’ M/V",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.5326744994859106,
+          0.028627834557784452,
+          0.2796798826346651
+        ],
+        "display": [
+          -0.04285011150747326,
+          0.0060944301393375385,
+          0.07740887506260452
+        ]
+      },
+      {
+        "video_id": "7G6_avXknCk",
+        "title": "P1Harmony (피원하모니) - ‘DUH!’ MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.8847190857886849,
+          0.43615394448243233,
+          0.11910116005037201
+        ],
+        "display": [
+          -0.0711697509744179,
+          0.09285053465288721,
+          0.03296442608349334
+        ]
+      },
+      {
+        "video_id": "H4H99b1CjPU",
+        "title": "ATEEZ(에이티즈) - 'Lemon Drop' Official MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.4265106702425236,
+          0.693222471115045,
+          -0.4382370739852495
+        ],
+        "display": [
+          -0.11475327117308225,
+          0.14757651029112764,
+          -0.12129381129724806
+        ]
+      },
+      {
+        "video_id": "JOF2ZTqvzwY",
+        "title": "ATEEZ(에이티즈) - 'In Your Fantasy' Official MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.9036982913674771,
+          -0.04324950870352861,
+          -1.147010282516254
+        ],
+        "display": [
+          -0.0726965015062331,
+          -0.009207161960584031,
+          -0.3174657212324589
+        ]
+      },
+      {
+        "video_id": "m18dRRu9-V4",
+        "title": "P1Harmony (피원하모니) - ‘UNIQUE’ MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.0732276869449242,
+          0.5022915563479556,
+          0.2740043421937786
+        ],
+        "display": [
+          -0.08633401092577363,
+          0.10693022532189209,
+          0.07583801770682098
+        ]
+      },
+      {
+        "video_id": "NCuFonpf-qk",
+        "title": "XLOV 엑스러브 'Rizz' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.140127026442067,
+          0.13030188887447666,
+          -1.2587757801240755
+        ],
+        "display": [
+          -0.09171561669063662,
+          0.027739288389637774,
+          -0.348399806870413
+        ]
+      },
+      {
+        "video_id": "W8ml4ryPwic",
+        "title": "STAYC(스테이씨) ‘I WANT IT’ MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.8808275386371245,
+          -0.027736378211214767,
+          -0.5755291779347746
+        ],
+        "display": [
+          -0.07085670195566086,
+          -0.005904652654929075,
+          -0.1592930668089266
+        ]
+      },
+      {
+        "video_id": "8cEdndsuzSE",
+        "title": "XG - GALA (Official Music Video)",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.1619962416653178,
+          0.7069956361718359,
+          -0.11624757697258299
+        ],
+        "display": [
+          -0.0934748492272075,
+          0.15050860744527136,
+          -0.03217462077512272
+        ]
+      },
+      {
+        "video_id": "cUfDOS2SINM",
+        "title": "XG - HYPNOTIZE (Official Music Video)",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.5444416765668625,
+          0.9374739156233615,
+          -0.993413200758688
+        ],
+        "display": [
+          -0.12424003424520884,
+          0.19957392427588336,
+          -0.27495362776421606
+        ]
+      },
+      {
+        "video_id": "eHHQaoEW30Q",
+        "title": "TWICE \"THIS IS FOR\" M/V",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.7850971340116395,
+          -0.4269263093874673,
+          -1.0414417264921876
+        ],
+        "display": [
+          -0.06315582925231858,
+          -0.09088611162521983,
+          -0.28824680463815666
+        ]
+      },
+      {
+        "video_id": "CgCVZdcKcqY",
+        "title": "BLACKPINK - ‘뛰어(JUMP)’ M/V",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.9564585587219694,
+          0.14375784075135928,
+          -0.8236878675272771
+        ],
+        "display": [
+          -0.0769407131992764,
+          0.030603855687119583,
+          -0.22797761007104794
+        ]
+      },
+      {
+        "video_id": "P7vBoGWoReg",
+        "title": "Stray Kids \"CEREMONY\" M/V",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.8333869945112764,
+          0.7994495242663732,
+          0.8599253450662403
+        ],
+        "display": [
+          -0.06704042652342279,
+          0.17019063267721732,
+          0.23800729953234445
+        ]
+      },
+      {
+        "video_id": "nYueShCPYUY",
+        "title": "ZEROBASEONE (제로베이스원) ‘LOVEPOCALYPSE’ MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -2.0564431998094164,
+          2.430505957385385,
+          -3.613020889510068
+        ],
+        "display": [
+          -0.16542714266529174,
+          0.5174177156372142,
+          -1.0
+        ]
+      },
+      {
+        "video_id": "Ao2GsXHMD_4",
+        "title": "JENNIE - Seoul City (Official Video)",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.6884488702237378,
+          0.0862700523373114,
+          0.38696987642495484
+        ],
+        "display": [
+          -0.05538112089982156,
+          0.018365580743646276,
+          0.10710424552165505
+        ]
+      },
+      {
+        "video_id": "M2WTUoy4y6E",
+        "title": "aespa 에스파 'Dirty Work' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -0.9271111003396086,
+          -0.10638059646620421,
+          -0.702703184355775
+        ],
+        "display": [
+          -0.07457990586692098,
+          -0.022646809420241196,
+          -0.1944918686731044
+        ]
+      },
+      {
+        "video_id": "R2-yomhYAj4",
+        "title": "KATSEYE (캣츠아이) \"Gnarly\" Official MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          0.15311538918369988,
+          -0.6239246536519311,
+          0.5366106330367882
+        ],
+        "display": [
+          0.012317112056919943,
+          -0.13282405996223354,
+          0.1485213203706535
+        ]
+      },
+      {
+        "video_id": "n7kFRxFIPrI",
+        "title": "Hearts2Hearts 하츠투하츠 'STYLE' MV",
+        "domain": "kpop",
+        "group": "top",
+        "score": [
+          -1.909274473025464,
+          1.2925402883524384,
+          -0.8153974605569803
+        ],
+        "display": [
+          -0.15358839994494114,
+          0.27516214940194095,
+          -0.22568301858546674
+        ]
+      },
+      {
+        "video_id": "2oudQLZ0kY8",
+        "title": "[MV] Saza Choi(SAZA최우준) _ Now, I Want Some Peace(쉬련다)",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.1967164488823367,
+          0.4958636144615925,
+          -0.08540306853008328
+        ],
+        "display": [
+          -0.09626785837678703,
+          0.10556181435503782,
+          -0.023637579505294277
+        ]
+      },
+      {
+        "video_id": "4jF2R41UvTI",
+        "title": "[MV] Mew(미유) _ Lalala(라라라) (2022) 현대 Ver.",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          0.4431322606416285,
+          -2.316307620832858,
+          -1.9684846506828406
+        ],
+        "display": [
+          0.03564703547734732,
+          -0.49310662837201685,
+          -0.5448306862542859
+        ]
+      },
+      {
+        "video_id": "Uv7LRq_R6xY",
+        "title": "YAOCHEN(야오천) - \"右肩的约定\"(Our Promise) M/V",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.43324688920063337,
+          -0.9040944913588927,
+          -0.656921147094771
+        ],
+        "display": [
+          -0.034851823262480194,
+          -0.19246795302749925,
+          -0.18182046746589686
+        ]
+      },
+      {
+        "video_id": "mWlOZ78kxJc",
+        "title": "YAOCHEN(야오천) \"你看风景我看你\" (EYES ON YOU) M/V",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.7754996497909799,
+          0.7514545235773264,
+          -1.194900503338619
+        ],
+        "display": [
+          -0.1428271074520164,
+          0.15997322771958963,
+          -0.3307206185294571
+        ]
+      },
+      {
+        "video_id": "f6u2FjgLesQ",
+        "title": "[Pase A La Fama] Official Theme Song 'Qué Puedo Perder' Official MV by Yahritza Y Su Esencia",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          5.784544926077817,
+          -0.10159609561546483,
+          2.089663371372246
+        ],
+        "display": [
+          0.4653280668431534,
+          -0.021628262029673603,
+          0.5783701327161738
+        ]
+      },
+      {
+        "video_id": "Pl88TpRRWkI",
+        "title": "BoA ボア 'Good for U' MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.0460634533874071,
+          0.24244345511856594,
+          -1.0019815938584224
+        ],
+        "display": [
+          -0.08414882947241321,
+          0.05161252056900479,
+          -0.2773251593334388
+        ]
+      },
+      {
+        "video_id": "vlmXpQOE75c",
+        "title": "TXT (투모로우바이투게더) 'SSS (Sending Secret Signals) (feat. HYDE)' Official MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.8920502802915063,
+          0.7691393829909292,
+          1.0215685316084124
+        ],
+        "display": [
+          -0.07175949668635277,
+          0.16373806504958952,
+          0.28274636733333114
+        ]
+      },
+      {
+        "video_id": "k6a1YUHtJDs",
+        "title": "CHANYEOL 찬열 'Ocean Drive' MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.30066305766147033,
+          -0.8430644873636376,
+          -0.3625086228723426
+        ],
+        "display": [
+          -0.024186338109682005,
+          -0.17947559431444965,
+          -0.10033394047757621
+        ]
+      },
+      {
+        "video_id": "FpC0CCONgK8",
+        "title": "BM - 'Ooh' MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.9850240379445907,
+          0.08422244603006031,
+          -0.9683581358533359
+        ],
+        "display": [
+          -0.07923861552261845,
+          0.01792967653415323,
+          -0.26801896957331095
+        ]
+      },
+      {
+        "video_id": "LiZAgfmoQwc",
+        "title": "izna 'BEEP (Japan Edition)' MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.1085467832950264,
+          0.9479498579521027,
+          0.6620142701363843
+        ],
+        "display": [
+          -0.0891751967126016,
+          0.20180409290904958,
+          0.18323012525569832
+        ]
+      },
+      {
+        "video_id": "Iy8-qPT8rQE",
+        "title": "xikers(싸이커스) - 'Up All Night' Official MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.1671601542040335,
+          0.7349728961054254,
+          -0.13355612517294818
+        ],
+        "display": [
+          -0.09389025155698369,
+          0.15646454015164452,
+          -0.03696522363341736
+        ]
+      },
+      {
+        "video_id": "4quKTg17A94",
+        "title": "모모랜드 (MOMOLAND) - 𝒘𝒉𝒊𝒕𝒆 𝒔𝒑𝒓𝒊𝒏𝒈 (하얀 봄) [Music Video]",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.8635158817021779,
+          -0.5951160006680829,
+          -2.257608167413511
+        ],
+        "display": [
+          -0.06946409459270748,
+          -0.12669113633281642,
+          -0.6248533392010491
+        ]
+      },
+      {
+        "video_id": "LPL1fozVrIw",
+        "title": "전지우 - 'Home Sweet Home' MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.372892395991688,
+          0.5555085695971161,
+          -0.7321006038991155
+        ],
+        "display": [
+          -0.11044003854658338,
+          0.11825931725221478,
+          -0.20262838945234818
+        ]
+      },
+      {
+        "video_id": "Mds7WAYiAck",
+        "title": "ENHYPEN (엔하이픈) 'Stealer' MV (Special edit)",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.2483040838165514,
+          -0.6786282798193761,
+          0.26333410262407597
+        ],
+        "display": [
+          -0.019974407803581447,
+          -0.1444696291502557,
+          0.07288474400705293
+        ]
+      },
+      {
+        "video_id": "bI3IJ31zIJo",
+        "title": "DAYOUNG (다영) \"number one rockstar\" Official MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.701721393832247,
+          0.9915481277125837,
+          -0.43426672171844993
+        ],
+        "display": [
+          -0.13689213872775852,
+          0.21108550078902466,
+          -0.12019491029771967
+        ]
+      },
+      {
+        "video_id": "JUeZL0TyT3I",
+        "title": "ZEROBASEONE (제로베이스원) ‘ROSES’ MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.35895627447629036,
+          -0.03535752389870492,
+          0.9892118625851224
+        ],
+        "display": [
+          -0.028875638692035906,
+          -0.007527078545380946,
+          0.27379079524759165
+        ]
+      },
+      {
+        "video_id": "3s3BVG798aU",
+        "title": "ENHYPEN (엔하이픈) 'No Way Back (Feat. So!YoON!)' MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.549933700495521,
+          -0.029109634074205158,
+          0.38605230883193126
+        ],
+        "display": [
+          -0.04423849914101956,
+          -0.006196997921335362,
+          0.10685028419093381
+        ]
+      },
+      {
+        "video_id": "wQLEkO71PAk",
+        "title": "화사 (HWASA) - ‘Good Goodbye (with. Duomo)’ Official Video",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          0.21213523981494367,
+          -1.0142741911054356,
+          0.1594134091277279
+        ],
+        "display": [
+          0.017064865484470882,
+          -0.21592353369753295,
+          0.044121917365759995
+        ]
+      },
+      {
+        "video_id": "v5_GoNFr5wc",
+        "title": "ZEROBASEONE (제로베이스원) ‘Running to Future’ MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.2397649059849583,
+          0.4863355342302551,
+          -0.1737804120761549
+        ],
+        "display": [
+          -0.09973081969528881,
+          0.10353343113189603,
+          -0.04809836903536969
+        ]
+      },
+      {
+        "video_id": "2GJfWMYCWY0",
+        "title": "BLACKPINK - ‘GO’ M/V",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.7989291665317314,
+          -0.128063301880723,
+          0.3155429678178434
+        ],
+        "display": [
+          -0.06426852403390275,
+          -0.02726272729953075,
+          0.08733494144304037
+        ]
+      },
+      {
+        "video_id": "-XrrMwG8jRI",
+        "title": "XG - 4 SEASONS (Official Music Video)",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.9717035657605633,
+          0.6079514659781315,
+          0.09418828189485293
+        ],
+        "display": [
+          -0.0781670723588878,
+          0.12942361148667716,
+          0.026069121872036843
+        ]
+      },
+      {
+        "video_id": "8xb_P7ureNU",
+        "title": "XG - ROCK THE BOAT (Official Music Video)",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.44013848607916206,
+          -0.7742155873387707,
+          -1.2233978817801294
+        ],
+        "display": [
+          -0.035406206276862355,
+          -0.164818711673716,
+          -0.33860802890238045
+        ]
+      },
+      {
+        "video_id": "SJpmNMWboWg",
+        "title": "DAYOUNG (다영) \"body\" Official MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.1383984332385961,
+          -0.9918103998070766,
+          -1.0387239934045631
+        ],
+        "display": [
+          -0.011133231086633418,
+          -0.2111413345250398,
+          -0.28749459944180283
+        ]
+      },
+      {
+        "video_id": "cRFWo5vWrcw",
+        "title": "ATEEZ(에이티즈) - 'Ash' Official MV",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -0.4937300664500732,
+          -0.38111802892751334,
+          0.14199298305638747
+        ],
+        "display": [
+          -0.039717291558721245,
+          -0.08113422611313673,
+          0.03930034931949756
+        ]
+      },
+      {
+        "video_id": "f8mkCg5T2gE",
+        "title": "모모랜드 (MOMOLAND) - RODEO [Music Video]",
+        "domain": "kpop",
+        "group": "bottom",
+        "score": [
+          -1.2760723276851507,
+          0.7078938617171681,
+          -0.5989362789646434
+        ],
+        "display": [
+          -0.10265150966618773,
+          0.15069982598904022,
+          -0.16577160699612237
+        ]
+      }
+    ],
+    "features": [
+      "scene_cuts_per_minute",
+      "scene_median_shot_len_s",
+      "scene_num_scenes",
+      "sync_beats_per_cut",
+      "hook_cuts_first_15s",
+      "scene_min_shot_len_s",
+      "tag_avg_characters",
+      "scene_avg_saturation",
+      "scene_max_shot_len_s",
+      "scene_avg_shot_len_s",
+      "lyrics_compression_ratio"
+    ],
+    "score": [
+      -0.5644253226741245,
+      -0.06325795190886577,
+      0.520982238568273
+    ],
+    "display": [
+      -0.04540425351236009,
+      -0.013466654904966454,
+      0.1441957449182972
+    ],
+    "explained_variance_pct": [
+      50.71,
+      15.0,
+      9.85
+    ]
+  },
+  "neighbors": [
+    {
+      "video_id": "k6a1YUHtJDs",
+      "title": "CHANYEOL 찬열 'Ocean Drive' MV",
+      "channel": "SMTOWN",
+      "domain": "kpop",
+      "group": "bottom",
+      "distance": 0.7114
+    },
+    {
+      "video_id": "R401j1QAvEg",
+      "title": "スプリットダンス / 初音ミク・重音テト",
+      "channel": "えいぷ",
+      "domain": "vocaloid",
+      "group": "top",
+      "distance": 0.7485
+    },
+    {
+      "video_id": "7EYuHASt2Ks",
+      "title": "ᵇᵉˢᵗ ᶠʳⁱᴱᴺᴰ / 雨衣, 初音ミク",
+      "channel": "hya",
+      "domain": "vocaloid",
+      "group": "top",
+      "distance": 0.7762
+    },
+    {
+      "video_id": "7qAAg5WeB20",
+      "title": "halyosy - ダンロウグモ ft. KAITO, 鏡音レン [Official Video]",
+      "channel": "halyosy",
+      "domain": "vocaloid",
+      "group": "top",
+      "distance": 0.7917
+    },
+    {
+      "video_id": "zN4Y7tFF8BY",
+      "title": "「リトルシスター」40mP feat.彩澄しゅお,彩澄りりせ",
+      "channel": "40meterP",
+      "domain": "vocaloid",
+      "group": "bottom",
+      "distance": 0.8262
+    }
+  ],
+  "centroids": {
+    "top_distance": 0.706254184304847,
+    "bottom_distance": 0.7188694632274695,
+    "closer_group": "top",
+    "coverage": 1.0
+  }
+}

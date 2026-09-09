@@ -1,0 +1,143 @@
+{
+  "vocaloid": {
+    "n": 47,
+    "stats": [
+      {
+        "metric": "lyrics_compression_ratio",
+        "n_top": 24,
+        "n_bot": 23,
+        "med_top": 0.52415,
+        "med_bot": 0.4989,
+        "p": 0.4125956449189422,
+        "delta": 0.14130434782608692,
+        "q": 0.8251912898378844,
+        "magnitude": "무시"
+      },
+      {
+        "metric": "lyrics_title_count",
+        "n_top": 24,
+        "n_bot": 23,
+        "med_top": 0.0,
+        "med_bot": 0.0,
+        "p": 0.7204328820191297,
+        "delta": 0.034420289855072506,
+        "q": 0.8901215695134546,
+        "magnitude": "무시"
+      },
+      {
+        "metric": "lyrics_first_chorus_s",
+        "n_top": 18,
+        "n_bot": 16,
+        "med_top": 57.0,
+        "med_bot": 79.0,
+        "p": 0.8901215695134546,
+        "delta": 0.03125,
+        "q": 0.8901215695134546,
+        "magnitude": "무시"
+      },
+      {
+        "metric": "sync_cut_on_line_ratio",
+        "n_top": 24,
+        "n_bot": 20,
+        "med_top": 0.21415,
+        "med_bot": 0.1172,
+        "p": 0.07688111245354151,
+        "delta": 0.31458333333333344,
+        "q": 0.30752444981416605,
+        "magnitude": "작음"
+      }
+    ],
+    "sensitivity": {
+      "dominant_source": "ocr",
+      "stats": [
+        {
+          "metric": "lyrics_compression_ratio",
+          "n_top": 20,
+          "n_bot": 17,
+          "med_top": 0.52415,
+          "med_bot": 0.442,
+          "p": 0.14772484583052456,
+          "delta": 0.2823529411764707,
+          "q": 0.14772484583052456,
+          "magnitude": "작음"
+        }
+      ]
+    }
+  },
+  "kpop": {
+    "n": 47,
+    "stats": [
+      {
+        "metric": "lyrics_compression_ratio",
+        "n_top": 23,
+        "n_bot": 24,
+        "med_top": 0.4698,
+        "med_bot": 0.44484999999999997,
+        "p": 0.4125956449189422,
+        "delta": 0.14130434782608692,
+        "q": 0.4418273765161099,
+        "magnitude": "무시"
+      },
+      {
+        "metric": "lyrics_title_first_s",
+        "n_top": 10,
+        "n_bot": 7,
+        "med_top": 60.5,
+        "med_bot": 35.0,
+        "p": 0.17159457707283232,
+        "delta": 0.41428571428571437,
+        "q": 0.4289864426820808,
+        "magnitude": "중간"
+      },
+      {
+        "metric": "lyrics_title_count",
+        "n_top": 23,
+        "n_bot": 24,
+        "med_top": 0.0,
+        "med_bot": 0.0,
+        "p": 0.4141295176752646,
+        "delta": 0.12137681159420288,
+        "q": 0.4418273765161099,
+        "magnitude": "무시"
+      },
+      {
+        "metric": "lyrics_first_chorus_s",
+        "n_top": 23,
+        "n_bot": 23,
+        "med_top": 66.0,
+        "med_bot": 79.0,
+        "p": 0.4418273765161099,
+        "delta": -0.13421550094517953,
+        "q": 0.4418273765161099,
+        "magnitude": "무시"
+      },
+      {
+        "metric": "sync_cut_on_line_ratio",
+        "n_top": 23,
+        "n_bot": 24,
+        "med_top": 0.303,
+        "med_bot": 0.2558,
+        "p": 0.10576442246022769,
+        "delta": 0.27717391304347827,
+        "q": 0.4289864426820808,
+        "magnitude": "작음"
+      }
+    ],
+    "sensitivity": {
+      "dominant_source": "asr",
+      "stats": [
+        {
+          "metric": "lyrics_compression_ratio",
+          "n_top": 23,
+          "n_bot": 21,
+          "med_top": 0.4698,
+          "med_bot": 0.4695,
+          "p": 0.7779719191378374,
+          "delta": 0.05175983436852993,
+          "q": 0.7779719191378374,
+          "magnitude": "무시"
+        }
+      ]
+    }
+  }
+}

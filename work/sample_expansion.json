@@ -1,0 +1,20 @@
+{
+  "vocaloid": {
+    "target_per_group": 40,
+    "eligible_population": 495,
+    "max_top": 40,
+    "max_bottom": 40,
+    "require_mv_marker": false,
+    "channel_cap": 2,
+    "feasible": true
+  },
+  "kpop": {
+    "target_per_group": 40,
+    "eligible_population": 998,
+    "max_top": 38,
+    "max_bottom": 23,
+    "require_mv_marker": true,
+    "channel_cap": 2,
+    "feasible": false
+  }
+}

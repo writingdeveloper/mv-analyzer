@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MV Analyzer Research Explorer</title>
+  <desc id="desc">Local-first music video research, benchmark exploration, and Analyze My MV report viewing.</desc>
+  <rect width="1200" height="630" fill="#f4f3ef"/>
+  <rect x="54" y="54" width="1092" height="522" rx="32" fill="#fbfaf7" stroke="#dad9d2" stroke-width="2"/>
+  <g transform="translate(92 92)">
+    <rect width="78" height="78" rx="22" fill="#191b1f"/>
+    <path d="M14 57V21h10l15 17 15-17h10v36H54V38L39 55 24 38v19H14Z" fill="#f4f3ef"/>
+  </g>
+  <text x="196" y="126" fill="#191b1f" font-size="26" font-family="Arial, sans-serif" font-weight="700">MV Analyzer</text>
+  <text x="196" y="157" fill="#656760" font-size="17" font-family="Arial, sans-serif" letter-spacing="2">RESEARCH EXPLORER</text>
+  <text x="92" y="278" fill="#191b1f" font-size="62" font-family="Arial, sans-serif" font-weight="700">Measure locally.</text>
+  <text x="92" y="350" fill="#7557ca" font-size="62" font-family="Georgia, serif">Explore comparatively.</text>
+  <text x="92" y="412" fill="#656760" font-size="24" font-family="Arial, sans-serif">100-MV reference corpus · bilingual research UI · Analyze My MV</text>
+  <g transform="translate(92 470)">
+    <circle cx="12" cy="12" r="12" fill="#58a2ea"/>
+    <circle cx="70" cy="12" r="12" fill="#a98dea"/>
+    <circle cx="128" cy="12" r="12" fill="#f08a63"/>
+    <path d="M12 12H70M70 12H128" stroke="#dad9d2" stroke-width="3"/>
+    <text x="170" y="20" fill="#656760" font-size="18" font-family="Arial, sans-serif">descriptive benchmark · not a success prediction</text>
+  </g>
+</svg>

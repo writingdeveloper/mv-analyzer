@@ -1,0 +1,17 @@
+{
+  "vocaloid": {
+    "n_pairs": 55,
+    "wilcoxon_p": 0.46093248865583747,
+    "median_log_ratio": 0.06976823931538667,
+    "median_ratio": 1.0722596448254744,
+    "auxiliary": false
+  },
+  "kpop": {
+    "n_pairs": 30,
+    "wilcoxon_p": 0.0021877754479646683,
+    "median_log_ratio": 1.1966205669608376,
+    "median_ratio": 3.308915747385312,
+    "auxiliary": true,
+    "note": "멀티 아티스트 레이블 채널 구조로 채널 내 매칭이 팬덤 규모를 통제하지 못함 — 게이트/해석에서 제외."
+  }
+}

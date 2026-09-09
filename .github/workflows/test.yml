@@ -1,0 +1,146 @@
+name: tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install deps (CPU-only; ASR/VLM/GPU stack excluded)
+        run: >
+          pip install -e . --no-deps &&
+          pip install yt-dlp 'scenedetect>=0.7,<0.8' opencv-python-headless
+          'librosa>=0.11' numpy scipy duckdb pytest ruff jsonschema
+      - name: Static correctness checks
+        run: ruff check *.py mv_analyzer tests --select F
+      - name: Validate tracked research inputs
+        env:
+          PYTHONUTF8: "1"
+        run: |
+          python -m mv_analyzer stats-qa --table work/features_table.jsonl
+          python -m mv_analyzer dataset-qa
+      - name: Run fast CPU QA
+        env:
+          PYTHONUTF8: "1"
+        run: pytest tests/ -q
+        # pytest.ini excludes slow/media, gpu and network tests by default.
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Install snapshot dependencies
+        run: |
+          pip install -e . --no-deps
+          pip install numpy scipy jsonschema
+      - name: Build public-safe Web snapshot
+        env:
+          PYTHONUTF8: "1"
+        run: mva web-export --out web/public/data
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install Web dependencies
+        working-directory: web
+        run: npm ci
+      - name: Check shared report contract
+        run: |
+          python scripts/build_report_contract.py --check
+          cd web && node scripts/build-report-validator.mjs --check
+      - name: Web unit tests
+        working-directory: web
+        run: npm test -- --run
+      - name: Web typecheck
+        working-directory: web
+        run: npm run typecheck
+      - name: Web production build
+        working-directory: web
+        run: npm run build
+      - name: Install Chromium for browser QA
+        working-directory: web
+        run: npx playwright install --with-deps chromium
+      - name: Web browser regression QA
+        working-directory: web
+        run: npm run test:e2e
+
+
+  public-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Build sanitized clean-history source tree
+        run: python scripts/build_public_release.py --out dist/public-release
+      - name: Audit sanitized source tree
+        run: python scripts/audit_public_release.py dist/public-release
+      - name: Verify clean-history candidate
+        working-directory: dist/public-release
+        run: |
+          git init -b master
+          git config user.name "MV Analyzer CI"
+          git config user.email "noreply@example.invalid"
+          git add .
+          git commit -m "public release candidate"
+          python scripts/audit_git_history.py --root .
+          rm -rf .git
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install sanitized source tree
+        run: >
+          pip install -e './dist/public-release[dev]' --no-deps &&
+          pip install yt-dlp 'scenedetect>=0.7,<0.8' opencv-python-headless
+          'librosa>=0.11' numpy scipy duckdb pytest ruff jsonschema
+      - name: Verify sanitized Python tree
+        working-directory: dist/public-release
+        env:
+          PYTHONUTF8: "1"
+        run: |
+          pytest tests/ -q
+          ruff check '*.py' mv_analyzer tests scripts/build_report_contract.py scripts/build_public_release.py scripts/audit_public_release.py scripts/audit_git_history.py --select F
+          python -m mv_analyzer stats-qa --table work/features_table.jsonl
+          python -m mv_analyzer dataset-qa
+          python scripts/build_report_contract.py --check
+          python -m mv_analyzer web-export --out web/public/data
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: dist/public-release/web/package-lock.json
+      - name: Verify sanitized Web tree
+        working-directory: dist/public-release/web
+        run: |
+          npm ci
+          npm test -- --run
+          npm run typecheck
+          npm run build
+      - name: Install Chromium for sanitized browser QA
+        working-directory: dist/public-release/web
+        run: npx playwright install --with-deps chromium
+      - name: Verify sanitized browser tree
+        working-directory: dist/public-release/web
+        run: npm run test:e2e
+      - name: Re-audit sanitized tree after build/test artifacts
+        run: python dist/public-release/scripts/audit_public_release.py dist/public-release

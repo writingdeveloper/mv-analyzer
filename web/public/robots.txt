@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mv-analyzer.writingdeveloper.blog/sitemap.xml

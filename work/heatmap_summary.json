@@ -1,0 +1,79 @@
+{
+  "kpop": {
+    "n_top": 25,
+    "n_bot": 21,
+    "stats": [
+      {
+        "metric": "heat_slope_first_30s",
+        "n_top": 25,
+        "n_bot": 21,
+        "med_top": -0.001312,
+        "med_bot": -0.00434,
+        "p": 0.15813445746246568,
+        "delta": 0.24571428571428577,
+        "q": 0.47440337238739705,
+        "magnitude": "작음"
+      },
+      {
+        "metric": "heat_peak_at_ratio",
+        "n_top": 25,
+        "n_bot": 21,
+        "med_top": 0.4375,
+        "med_bot": 0.565,
+        "p": 0.39580660842941706,
+        "delta": -0.14857142857142858,
+        "q": 0.5937099126441256,
+        "magnitude": "작음"
+      },
+      {
+        "metric": "heat_peak_value",
+        "n_top": 25,
+        "n_bot": 21,
+        "med_top": 1.0,
+        "med_bot": 1.0,
+        "p": 0.7405532829866586,
+        "delta": -0.05142857142857138,
+        "q": 0.7405532829866587,
+        "magnitude": "무시"
+      }
+    ],
+    "mediation": [
+      {
+        "pair": "hook_cuts_first_15s × heat_slope_first_30s",
+        "rho": -0.2395030936100078,
+        "p": 0.1089093804076586,
+        "n": 46
+      },
+      {
+        "pair": "scene_cuts_per_minute × heat_slope_first_30s",
+        "rho": 0.3126927352684518,
+        "p": 0.03436213153779769,
+        "n": 46
+      }
+    ]
+  },
+  "vocaloid": {
+    "n_top": 24,
+    "note": "히트맵 보유 선택 편향 — top 내 연속 분석만",
+    "continuous": [
+      {
+        "metric": "heat_slope_first_30s",
+        "rho": 0.09652173913043478,
+        "p": 0.6536731719946907,
+        "n": 24
+      },
+      {
+        "metric": "heat_peak_at_ratio",
+        "rho": -0.2339639107276342,
+        "p": 0.2711763916916593,
+        "n": 24
+      },
+      {
+        "metric": "heat_peak_value",
+        "rho": 0.2252967391900184,
+        "p": 0.28983300542192847,
+        "n": 24
+      }
+    ]
+  }
+}

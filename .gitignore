@@ -1,0 +1,47 @@
+# 미디어 원본은 커밋하지 않음 (URL로 재수집 가능)
+*.mp4
+*.wav
+*.m4a
+pilot/keyframes/
+pilot/subframes/
+__pycache__/
+*.pyc
+/data/
+
+# 가사 저작물 — 커밋 금지 (저작권)
+pilot/lyrics_*
+pilot/captions.*
+*.lrc
+
+# 로컬 조회 인덱스/임시 인덱스
+work/*.duckdb
+work/*.index.jsonl
+
+# editable/install metadata
+*.egg-info/
+work/*.duckdb.meta.json
+
+# isolated agent worktrees
+.worktrees/
+
+# Web UI build/dependencies
+web/node_modules/
+web/dist/
+web/public/data/
+web/test-results/
+web/playwright-report/
+
+.vercel/
+.env.local
+
+# 개인 취향 목록 / 로컬 내보내기 (가사 라인 포함)
+work/favorites*.txt
+work/exports/
+
+# 실험 로그 / 라벨용 프레임 스트립 (저작물 프레임 — 커밋 금지)
+work/*.log
+work/**/*.log
+work/experiments/motion/label*/
+
+/.venv-release/
+/dist/

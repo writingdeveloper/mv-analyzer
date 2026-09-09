@@ -1,0 +1,16 @@
+# yt-dlp는 최신 nightly 권장: pip install -U --pre yt-dlp
+# (YouTube 추출기 수정이 nightly에 먼저 반영 — 안정판은 봇 판정/Visitor Data 오류 실측)
+yt-dlp
+scenedetect>=0.7,<0.8
+opencv-python-headless
+librosa>=0.11
+numpy
+scipy
+matplotlib
+pytest
+# ASR (P3) — torch/torchaudio는 CUDA 빌드 필요: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124
+demucs
+faster-whisper
+
+# CPU-only local query index
+duckdb>=1.0

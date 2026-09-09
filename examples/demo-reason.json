@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "kind": "mv-analyzer-reason",
+  "policy_id": "reason-v1-z075-tail20-compose-v1",
+  "generated_at": "2026-09-09T18:00:00Z",
+  "video": {
+    "video_id": "hrBjKBPNi1c",
+    "title": "聖人君子でありたい / 重音テトSV",
+    "channel": "しゃいと"
+  },
+  "source_report": {
+    "schema_version": 2,
+    "source_features_sha256": "5704b0b0c42ba0149c094d6930bc44f126ac0277948bdae04727acce8aef334a",
+    "corpus_sha256": "d8e96f72b2401951c884a51e4ec16510c4f695ee87b219d5f2af05ce9f22d91e",
+    "benchmark_domain": "all"
+  },
+  "summary": {
+    "distinctive": [
+      "distinctive:sync_first_cut_s:low",
+      "distinctive:hook_cuts_first_15s:high",
+      "distinctive:audio_onsets_per_sec:high",
+      "distinctive:lyrics_first_lyric_at_s:low"
+    ],
+    "feel": [
+      "feel:closeup-focus",
+      "feel:event-dense-audio",
+      "feel:front-loaded-opening"
+    ],
+    "taste": []
+  },
+  "claims": [
+    {
+      "id": "distinctive:sync_first_cut_s:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "synchronization",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "sync_first_cut_s",
+          "label": {
+            "ko": "첫 컷 시점(초)",
+            "en": "First cut time (s)"
+          },
+          "value": 0.67,
+          "z": -0.24118393887015302,
+          "reference_percentile": 5.7,
+          "reference_median": 2.63
+        }
+      ]
+    },
+    {
+      "id": "distinctive:hook_cuts_first_15s:high",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "hook",
+      "direction": "high",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.high",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "hook_cuts_first_15s",
+          "label": {
+            "ko": "첫 15초 컷 수",
+            "en": "Cuts in first 15s"
+          },
+          "value": 10.0,
+          "z": 1.3392804651209023,
+          "reference_percentile": 94.0,
+          "reference_median": 4.5
+        }
+      ]
+    },
+    {
+      "id": "distinctive:audio_onsets_per_sec:high",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "audio",
+      "direction": "high",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.high",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "audio_onsets_per_sec",
+          "label": {
+            "ko": "온셋 밀도(/초)",
+            "en": "Onset density (/s)"
+          },
+          "value": 4.42,
+          "z": 1.2833522231114962,
+          "reference_percentile": 92.5,
+          "reference_median": 3.355
+        }
+      ]
+    },
+    {
+      "id": "distinctive:lyrics_first_lyric_at_s:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "lyrics",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "lyrics_first_lyric_at_s",
+          "label": {
+            "ko": "첫 가사 시점(초)",
+            "en": "First lyric time (s)"
+          },
+          "value": 0.0,
+          "z": -0.846870031840813,
+          "reference_percentile": 10.1,
+          "reference_median": 7.0
+        }
+      ]
+    },
+    {
+      "id": "distinctive:title_len:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "packaging",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "title_len",
+          "label": {
+            "ko": "제목 길이",
+            "en": "Title length"
+          },
+          "value": 18.0,
+          "z": -0.99072746103265,
+          "reference_percentile": 11.0,
+          "reference_median": 31.0
+        }
+      ]
+    },
+    {
+      "id": "distinctive:lyrics_first_vocal_at_s:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "lyrics",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "lyrics_first_vocal_at_s",
+          "label": {
+            "ko": "첫 보컬 시점(초)",
+            "en": "First vocal time (s)"
+          },
+          "value": 0.0,
+          "z": -0.6027417976361401,
+          "reference_percentile": 12.6,
+          "reference_median": 8.0
+        }
+      ]
+    },
+    {
+      "id": "distinctive:sync_cut_accel_at_peak:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "synchronization",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "sync_cut_accel_at_peak",
+          "label": {
+            "ko": "피크 구간 컷 가속",
+            "en": "Cut acceleration at peak"
+          },
+          "value": 0.41,
+          "z": -1.1932843823798749,
+          "reference_percentile": 13.0,
+          "reference_median": 1.0350000000000001
+        }
+      ]
+    },
+    {
+      "id": "distinctive:scene_min_shot_len_s:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "editing",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "scene_min_shot_len_s",
+          "label": {
+            "ko": "최단 샷(초)",
+            "en": "Shortest shot (s)"
+          },
+          "value": 0.53,
+          "z": -0.21255455892689948,
+          "reference_percentile": 13.5,
+          "reference_median": 0.67
+        }
+      ]
+    },
+    {
+      "id": "distinctive:tag_closeup_ratio:high",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "visual",
+      "direction": "high",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.high",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "tag_closeup_ratio",
+          "label": {
+            "ko": "클로즈업 비율",
+            "en": "Close-up ratio"
+          },
+          "value": 0.729,
+          "z": 1.2592424841964847,
+          "reference_percentile": 86.5,
+          "reference_median": 0.3835
+        }
+      ]
+    },
+    {
+      "id": "distinctive:duration_s:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "metadata",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "duration_s",
+          "label": {
+            "ko": "곡 길이(초)",
+            "en": "Duration (s)"
+          },
+          "value": 130.0,
+          "z": -1.1262150475608779,
+          "reference_percentile": 14.5,
+          "reference_median": 183.5
+        }
+      ]
+    },
+    {
+      "id": "distinctive:audio_peak_energy_ratio:high",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "audio",
+      "direction": "high",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.high",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "audio_peak_energy_ratio",
+          "label": {
+            "ko": "피크 위치(비율)",
+            "en": "Peak position ratio"
+          },
+          "value": 0.848,
+          "z": 0.9977412807949083,
+          "reference_percentile": 83.0,
+          "reference_median": 0.6875
+        }
+      ]
+    },
+    {
+      "id": "distinctive:hook_energy_first_10s_ratio:high",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "hook",
+      "direction": "high",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.high",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "hook_energy_first_10s_ratio",
+          "label": {
+            "ko": "첫 10초 에너지 비율",
+            "en": "First-10s energy ratio"
+          },
+          "value": 0.88,
+          "z": 0.9983793133616835,
+          "reference_percentile": 83.0,
+          "reference_median": 0.609
+        }
+      ]
+    },
+    {
+      "id": "distinctive:thumb_brightness:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "packaging",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "thumb_brightness",
+          "label": {
+            "ko": "썸네일 밝기",
+            "en": "Thumbnail brightness"
+          },
+          "value": 0.277,
+          "z": -1.0127668459892099,
+          "reference_percentile": 18.5,
+          "reference_median": 0.476
+        }
+      ]
+    },
+    {
+      "id": "distinctive:tag_avg_characters:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "visual",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "tag_avg_characters",
+          "label": {
+            "ko": "평균 등장인물 수",
+            "en": "Avg. characters"
+          },
+          "value": 0.9,
+          "z": -0.43960072972870595,
+          "reference_percentile": 19.0,
+          "reference_median": 1.35
+        }
+      ]
+    },
+    {
+      "id": "distinctive:thumb_saturation:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "packaging",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "thumb_saturation",
+          "label": {
+            "ko": "썸네일 채도",
+            "en": "Thumbnail saturation"
+          },
+          "value": 0.206,
+          "z": -0.8729715050442649,
+          "reference_percentile": 19.5,
+          "reference_median": 0.3305
+        }
+      ]
+    },
+    {
+      "id": "distinctive:tag_wide_ratio:low",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "visual",
+      "direction": "low",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.low",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "tag_wide_ratio",
+          "label": {
+            "ko": "와이드샷 비율",
+            "en": "Wide-shot ratio"
+          },
+          "value": 0.125,
+          "z": -0.9183110264430028,
+          "reference_percentile": 22.5,
+          "reference_median": 0.3285
+        }
+      ]
+    },
+    {
+      "id": "distinctive:tag_lyrics_text_ratio:high",
+      "question": "distinctive",
+      "claim_type": "descriptive_difference",
+      "subject": "lyrics",
+      "direction": "high",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feature.high",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "tag_lyrics_text_ratio",
+          "label": {
+            "ko": "가사 텍스트 씬 비율",
+            "en": "Lyric-text scene ratio"
+          },
+          "value": 0.812,
+          "z": 0.9585088940582078,
+          "reference_percentile": 76.5,
+          "reference_median": 0.444
+        }
+      ]
+    },
+    {
+      "id": "feel:closeup-focus",
+      "question": "feel",
+      "claim_type": "measured_composition",
+      "subject": "visual framing",
+      "direction": "mixed",
+      "support": "supported",
+      "confidence": "medium",
+      "scope": "reference_corpus",
+      "text_key": "reason.feel.closeup_focus",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "tag_closeup_ratio",
+          "label": {
+            "ko": "클로즈업 비율",
+            "en": "Close-up ratio"
+          },
+          "value": 0.729,
+          "z": 1.2592424841964847,
+          "reference_percentile": 86.5,
+          "reference_median": 0.3835
+        },
+        {
+          "kind": "feature",
+          "feature_id": "tag_wide_ratio",
+          "label": {
+            "ko": "와이드샷 비율",
+            "en": "Wide-shot ratio"
+          },
+          "value": 0.125,
+          "z": -0.9183110264430028,
+          "reference_percentile": 22.5,
+          "reference_median": 0.3285
+        }
+      ]
+    },
+    {
+      "id": "feel:event-dense-audio",
+      "question": "feel",
+      "claim_type": "measured_composition",
+      "subject": "audio intensity",
+      "direction": "mixed",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feel.event_dense_audio",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "audio_onsets_per_sec",
+          "label": {
+            "ko": "온셋 밀도(/초)",
+            "en": "Onset density (/s)"
+          },
+          "value": 4.42,
+          "z": 1.2833522231114962,
+          "reference_percentile": 92.5,
+          "reference_median": 3.355
+        },
+        {
+          "kind": "feature",
+          "feature_id": "audio_peak_energy_ratio",
+          "label": {
+            "ko": "피크 위치(비율)",
+            "en": "Peak position ratio"
+          },
+          "value": 0.848,
+          "z": 0.9977412807949083,
+          "reference_percentile": 83.0,
+          "reference_median": 0.6875
+        }
+      ]
+    },
+    {
+      "id": "feel:front-loaded-opening",
+      "question": "feel",
+      "claim_type": "measured_composition",
+      "subject": "opening hook",
+      "direction": "mixed",
+      "support": "supported",
+      "confidence": "high",
+      "scope": "reference_corpus",
+      "text_key": "reason.feel.front_loaded",
+      "evidence": [
+        {
+          "kind": "feature",
+          "feature_id": "hook_cuts_first_15s",
+          "label": {
+            "ko": "첫 15초 컷 수",
+            "en": "Cuts in first 15s"
+          },
+          "value": 10.0,
+          "z": 1.3392804651209023,
+          "reference_percentile": 94.0,
+          "reference_median": 4.5
+        },
+        {
+          "kind": "feature",
+          "feature_id": "sync_first_cut_s",
+          "label": {
+            "ko": "첫 컷 시점(초)",
+            "en": "First cut time (s)"
+          },
+          "value": 0.67,
+          "z": -0.24118393887015302,
+          "reference_percentile": 5.7,
+          "reference_median": 2.63
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "descriptive-reference-only",
+    "not-a-success-prediction"
+  ]
+}

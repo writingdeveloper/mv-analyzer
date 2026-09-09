@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mv-analyzer"
+version = "0.2.0"
+description = "Local-first music video analysis and evidence-backed explanation toolkit"
+readme = "README.md"
+authors = [{name = "Sihyeong Lee"}]
+license = {file = "LICENSE"}
+keywords = ["music-video", "video-analysis", "multimodal", "research", "local-first", "explainable-ai"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.12"
+dependencies = [
+  "yt-dlp",
+  "scenedetect>=0.7,<0.8",
+  "opencv-python-headless",
+  "librosa>=0.11",
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "duckdb>=1.0",
+  "jsonschema>=4.23,<5",
+]
+
+
+[project.urls]
+Homepage = "https://mv-analyzer.writingdeveloper.blog/"
+Documentation = "https://github.com/writingdeveloper/mv-analyzer#readme"
+Repository = "https://github.com/writingdeveloper/mv-analyzer"
+Issues = "https://github.com/writingdeveloper/mv-analyzer/issues"
+
+[project.optional-dependencies]
+gpu = ["demucs", "faster-whisper"]
+dev = ["pytest", "ruff>=0.12"]
+
+[project.scripts]
+mva = "mv_analyzer.cli:main"
+mv-analyzer = "mv_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mv_analyzer*"]
+
+[tool.setuptools.package-data]
+mv_analyzer = ["schemas/*.json"]

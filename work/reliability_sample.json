@@ -1,0 +1,470 @@
+[
+  {
+    "video_id": "78F_I8MQLYM",
+    "qwen": {
+      "mood": "어둠",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "78F_I8MQLYM",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "wide",
+      "num_characters": 1,
+      "style": "3dcg"
+    }
+  },
+  {
+    "video_id": "uWMr16O_Aso",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 4,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "uWMr16O_Aso",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "icBDYkfxpMs",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "3dcg"
+    }
+  },
+  {
+    "video_id": "icBDYkfxpMs",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "s4kAOHUSvT8",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "s4kAOHUSvT8",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "JAWrvTEPDLc",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "JAWrvTEPDLc",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "7Ucwpeg9iXM",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "wide",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "7Ucwpeg9iXM",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "OreUrf87EUE",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "medium",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "OreUrf87EUE",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "Ce25e2hH8GQ",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "Ce25e2hH8GQ",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "3iUgKH8c7p4",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "3iUgKH8c7p4",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "i-FD7IfSJ40",
+    "qwen": {
+      "mood": "어둠",
+      "shot_type": "closeup",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "i-FD7IfSJ40",
+    "qwen": {
+      "mood": "분노",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "h-ibHxT6xbY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "h-ibHxT6xbY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "medium",
+      "num_characters": 2,
+      "style": "live_action"
+    }
+  },
+  {
+    "video_id": "OSeSYGiDf9w",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "OSeSYGiDf9w",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "hfY9-ROVfvg",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "medium",
+      "num_characters": 2,
+      "style": "live_action"
+    }
+  },
+  {
+    "video_id": "hfY9-ROVfvg",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "live_action"
+    }
+  },
+  {
+    "video_id": "JiE9drSO8nk",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "JiE9drSO8nk",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "bmbAm-fKnbQ",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "closeup",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "bmbAm-fKnbQ",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "wide",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "iFn15MwYJ9g",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 1,
+      "style": "motion_graphics"
+    }
+  },
+  {
+    "video_id": "iFn15MwYJ9g",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "yV5-Gk59p8o",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "yV5-Gk59p8o",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "closeup",
+      "num_characters": 0,
+      "style": "motion_graphics"
+    }
+  },
+  {
+    "video_id": "cknsKkzA2lM",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 0,
+      "style": "motion_graphics"
+    }
+  },
+  {
+    "video_id": "cknsKkzA2lM",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "7EYuHASt2Ks",
+    "qwen": {
+      "mood": "어둠",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "7EYuHASt2Ks",
+    "qwen": {
+      "mood": "긴장",
+      "shot_type": "wide",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "SgmdoeayELI",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "closeup",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "SgmdoeayELI",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "LaceJI6HjpI",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "closeup",
+      "num_characters": 0,
+      "style": "live_action"
+    }
+  },
+  {
+    "video_id": "LaceJI6HjpI",
+    "qwen": {
+      "mood": "평온",
+      "shot_type": "wide",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "zN4Y7tFF8BY",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "wide",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "zN4Y7tFF8BY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "X2CFrEDiDyY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "X2CFrEDiDyY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "medium",
+      "num_characters": 2,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "HWgwsHrNQU4",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "medium",
+      "num_characters": 1,
+      "style": "live_action"
+    }
+  },
+  {
+    "video_id": "HWgwsHrNQU4",
+    "qwen": {
+      "mood": "어둠",
+      "shot_type": "wide",
+      "num_characters": 0,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "ZxmqjmSCJOY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "ZxmqjmSCJOY",
+    "qwen": {
+      "mood": "슬픔",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "lhwV573qUlE",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  },
+  {
+    "video_id": "lhwV573qUlE",
+    "qwen": {
+      "mood": "활기",
+      "shot_type": "closeup",
+      "num_characters": 1,
+      "style": "anime"
+    }
+  }
+]

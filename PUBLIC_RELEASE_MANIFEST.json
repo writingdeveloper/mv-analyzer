@@ -1,0 +1,27 @@
+{
+  "policy_version": "public-release-v1",
+  "source_commit": "04482e8e8851f865fbc9311cf2af4c25378f19ae",
+  "history_mode": "clean-history-required",
+  "included_files": 291,
+  "sanitized_files": [
+    "dataset/features_100mv.csv",
+    "dataset/features_50mv.csv",
+    "examples/demo-reason.json",
+    "examples/demo-report.json",
+    "web/e2e/fixtures/analyze-report.json",
+    "work/features_table.jsonl",
+    "work/kpop/features_table.jsonl",
+    "work/middle/features_table.jsonl",
+    "work/reliability_sample.json"
+  ],
+  "dropped_fields": [
+    "thumb_text_content"
+  ],
+  "omitted_categories": [
+    "private-agent-config",
+    "internal-plans",
+    "pilot-artifacts",
+    "raw-work-provenance",
+    "legacy-self-contained-html"
+  ]
+}

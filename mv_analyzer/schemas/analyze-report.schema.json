@@ -1,0 +1,748 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "generated_at",
+    "pipeline",
+    "video",
+    "benchmark",
+    "features",
+    "pca",
+    "neighbors",
+    "centroids"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "kind": {
+      "const": "mv-analyzer-report"
+    },
+    "generated_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$"
+    },
+    "pipeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "git_commit",
+        "feature_schema",
+        "source_features_sha256",
+        "measurement_git_commit",
+        "measurement_status"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "git_commit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            {
+              "const": "unknown"
+            }
+          ]
+        },
+        "feature_schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "source_features_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "measurement_git_commit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "measurement_status": {
+          "enum": [
+            "recorded",
+            "unverified"
+          ]
+        }
+      }
+    },
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "video_id",
+        "title",
+        "channel",
+        "upload_date",
+        "duration_s"
+      ],
+      "properties": {
+        "video_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{11}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "channel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "upload_date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^(\\d{8}|\\d{4}-\\d{2}-\\d{2})$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration_s": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000000.0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "benchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "corpus_id",
+        "label",
+        "sampling",
+        "domain",
+        "n",
+        "collected_at",
+        "collection_start",
+        "collection_end",
+        "corpus_sha256",
+        "target_in_reference",
+        "warning"
+      ],
+      "properties": {
+        "corpus_id": {
+          "const": "extreme-reference-2026-07"
+        },
+        "label": {
+          "const": "Extreme Reference Corpus v2026.07"
+        },
+        "sampling": {
+          "const": "extreme-groups"
+        },
+        "domain": {
+          "enum": [
+            "all",
+            "vocaloid",
+            "kpop"
+          ]
+        },
+        "n": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "collected_at": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "collection_start": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "collection_end": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "corpus_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "target_in_reference": {
+          "type": "boolean"
+        },
+        "warning": {
+          "const": "descriptive-reference-only"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "domain": {
+                "const": "all"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "n": {
+                "const": 100
+              },
+              "corpus_sha256": {
+                "const": "d8e96f72b2401951c884a51e4ec16510c4f695ee87b219d5f2af05ce9f22d91e"
+              },
+              "collection_start": {
+                "const": "2026-07-16"
+              },
+              "collection_end": {
+                "const": "2026-07-21"
+              },
+              "collected_at": {
+                "const": "2026-07-21"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "domain": {
+                "const": "vocaloid"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "n": {
+                "const": 50
+              },
+              "corpus_sha256": {
+                "const": "3923094649f5659242c8a534ab3d428313ea907fb859ef1cf0524560aa0da7f0"
+              },
+              "collection_start": {
+                "const": "2026-07-16"
+              },
+              "collection_end": {
+                "const": "2026-07-16"
+              },
+              "collected_at": {
+                "const": "2026-07-16"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "domain": {
+                "const": "kpop"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "n": {
+                "const": 50
+              },
+              "corpus_sha256": {
+                "const": "c05386318567bd0536a962ff2649a971a8e332c9a15bbfb7e21127262b84503d"
+              },
+              "collection_start": {
+                "const": "2026-07-16"
+              },
+              "collection_end": {
+                "const": "2026-07-21"
+              },
+              "collected_at": {
+                "const": "2026-07-21"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "labels",
+          "category",
+          "value",
+          "z",
+          "percentile",
+          "reference_median",
+          "reference_mean",
+          "reference_std",
+          "reference_n"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "duration_s",
+              "scene_num_scenes",
+              "scene_avg_shot_len_s",
+              "scene_median_shot_len_s",
+              "scene_min_shot_len_s",
+              "scene_max_shot_len_s",
+              "scene_cuts_per_minute",
+              "scene_avg_brightness",
+              "scene_avg_saturation",
+              "audio_bpm",
+              "audio_rms_mean",
+              "audio_rms_std",
+              "audio_spectral_centroid_hz",
+              "audio_onsets_per_sec",
+              "audio_peak_energy_ratio",
+              "audio_lufs_i",
+              "audio_lra_lu",
+              "tag_closeup_ratio",
+              "tag_wide_ratio",
+              "tag_avg_characters",
+              "tag_lyrics_text_ratio",
+              "lyrics_n_lyric_lines",
+              "lyrics_lyric_lines_per_min",
+              "lyrics_first_lyric_at_s",
+              "lyrics_first_vocal_at_s",
+              "lyrics_text_frame_ratio",
+              "thumb_brightness",
+              "thumb_saturation",
+              "thumb_num_characters",
+              "title_len",
+              "title_bracket_segments",
+              "title_exclaim_count",
+              "sync_cut_beat_offset_med_s",
+              "sync_cut_on_beat_ratio",
+              "sync_cut_accel_at_peak",
+              "sync_first_cut_s",
+              "sync_beats_per_cut",
+              "hook_cuts_first_15s",
+              "hook_energy_first_10s_ratio",
+              "upload_hour"
+            ]
+          },
+          "labels": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ko",
+              "en"
+            ],
+            "properties": {
+              "ko": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            }
+          },
+          "category": {
+            "enum": [
+              "editing",
+              "hook",
+              "visual",
+              "audio",
+              "lyrics",
+              "packaging",
+              "synchronization",
+              "metadata"
+            ]
+          },
+          "value": {
+            "type": "number",
+            "minimum": -1000000000000.0,
+            "maximum": 1000000000000.0
+          },
+          "z": {
+            "type": "number",
+            "minimum": -1000000000000.0,
+            "maximum": 1000000000000.0
+          },
+          "percentile": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "reference_median": {
+            "type": "number",
+            "minimum": -1000000000000.0,
+            "maximum": 1000000000000.0
+          },
+          "reference_mean": {
+            "type": "number",
+            "minimum": -1000000000000.0,
+            "maximum": 1000000000000.0
+          },
+          "reference_std": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1000000000000.0
+          },
+          "reference_n": {
+            "type": "integer",
+            "minimum": 20,
+            "maximum": 100
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 40
+    },
+    "pca": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "features",
+        "score",
+        "display",
+        "explained_variance_pct",
+        "observed_count",
+        "coverage",
+        "imputed_features",
+        "experimental_features",
+        "basis_id",
+        "reference_points"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "available",
+            "insufficient_coverage"
+          ]
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "minItems": 1,
+          "maxItems": 40,
+          "uniqueItems": true
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": -1000000000000.0,
+                "maximum": 1000000000000.0
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "display": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": -1000000000000.0,
+                "maximum": 1000000000000.0
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "explained_variance_pct": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "observed_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 40
+        },
+        "coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "imputed_features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "minItems": 0,
+          "maxItems": 40,
+          "uniqueItems": true
+        },
+        "experimental_features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "minItems": 0,
+          "maxItems": 40,
+          "uniqueItems": true
+        },
+        "basis_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reference_points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "video_id",
+              "title",
+              "domain",
+              "group",
+              "score",
+              "display"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{11}$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "domain": {
+                "enum": [
+                  "vocaloid",
+                  "kpop"
+                ]
+              },
+              "group": {
+                "enum": [
+                  "top",
+                  "bottom"
+                ]
+              },
+              "score": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": -1000000000000.0,
+                  "maximum": 1000000000000.0
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "display": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": -1000000000000.0,
+                  "maximum": 1000000000000.0
+                },
+                "minItems": 3,
+                "maxItems": 3
+              }
+            }
+          },
+          "minItems": 20,
+          "maxItems": 100
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "available"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "score": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": -1000000000000.0,
+                  "maximum": 1000000000000.0
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "display": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": -1000000000000.0,
+                  "maximum": 1000000000000.0
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "coverage": {
+                "minimum": 0.6
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "score": {
+                "type": "null"
+              },
+              "display": {
+                "type": "null"
+              },
+              "coverage": {
+                "exclusiveMaximum": 0.6
+              }
+            }
+          }
+        }
+      ]
+    },
+    "neighbors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "video_id",
+          "title",
+          "channel",
+          "domain",
+          "group",
+          "distance"
+        ],
+        "properties": {
+          "video_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{11}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "channel": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "domain": {
+            "enum": [
+              "vocaloid",
+              "kpop"
+            ]
+          },
+          "group": {
+            "enum": [
+              "top",
+              "bottom"
+            ]
+          },
+          "distance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000000000000.0
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 5
+    },
+    "centroids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "top_distance",
+        "bottom_distance",
+        "closer_group",
+        "coverage"
+      ],
+      "properties": {
+        "top_distance": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000000.0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bottom_distance": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000000.0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "closer_group": {
+          "anyOf": [
+            {
+              "enum": [
+                "top",
+                "bottom"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}
