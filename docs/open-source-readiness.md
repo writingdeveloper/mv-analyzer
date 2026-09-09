@@ -1,47 +1,59 @@
-# Open-source readiness checklist
+# Open-source readiness — released
 
-MV Analyzer's **canonical research repository remains PRIVATE** while the open-source distribution is prepared. The public Web Research Explorer is deployed separately. Directly flipping the canonical repository to PUBLIC is **not approved** because its historical commits contain raw provenance that is intentionally excluded from the public source distribution.
+MV Analyzer now uses a deliberate two-repository model so research provenance and public source have different trust boundaries.
+
+- **Public source:** `https://github.com/writingdeveloper/mv-analyzer`
+- **Private raw provenance:** `writingdeveloper/mv-analyzer-research-private` (PRIVATE)
+- **Deployed explorer:** `https://mv-analyzer.writingdeveloper.blog/`
+
+The private provenance repository remains the source of truth for raw collection artifacts. Public source is generated from it by `scripts/build_public_release.py`, audited, and committed into a separate clean Git history. The private `.git` history must never be pushed to the public repository.
 
 ## Completed product gates
 
-- [x] Reason Engine v1 merged and production-verified while the repository remained PRIVATE.
-- [x] `reason-export` verified against an existing cached MV without network/GPU/model calls; the source feature SHA remained unchanged.
-- [x] README product-first onboarding and research caveats reviewed.
-- [x] Portable Analyze/Reason schemas reviewed and tested for copyright/privacy leakage.
+- [x] Reason Engine v1 merged and production-verified.
+- [x] `reason-export` verified against an existing cached MV without network/GPU/model calls; source feature SHA remained unchanged.
+- [x] Product-first README and research caveats reviewed.
+- [x] Portable Analyze/Reason schemas tested for copyright/privacy leakage.
 - [x] Production custom-domain regression completed after the Reason Engine release.
+- [x] Public GitHub source link deployed only after the public repository existed.
 
 ## Completed open-source cleanup
 
-- [x] Code license selected: **Apache-2.0** (`LICENSE`).
+- [x] Source license: **Apache-2.0** (`LICENSE`).
 - [x] Dataset/rightsholder boundary documented separately in `DATA_LICENSE.md`.
 - [x] Direct dependency/model notices documented in `THIRD_PARTY_LICENSES.md`; model weights are not distributed.
 - [x] OpenMontage AGPLv3 boundary audited: no package dependency/import/vendor copy; JSON interoperability remains separate.
-- [x] Public CSV/JSONL release removes `thumb_text_content` and excludes raw lyric/subtitle/OCR text.
-- [x] Raw population/enumeration/batch logs remain private provenance and are omitted from the public source tree.
-- [x] Pilot outputs and legacy self-contained HTML with embedded thumbnails are omitted from the public source tree.
-- [x] `SECURITY.md`, `CONTRIBUTING.md`, `CITATION.cff`, `NOTICE`, and package metadata added.
-- [x] Personal absolute/private-network references removed from the current public candidate.
-- [x] Public-release audit rejects secrets, private paths/networks, embedded media, unsafe dataset keys, and oversized release artifacts.
-- [x] Existing Git history audited; direct visibility flip rejected because old commits contain private paths/OCR fields/embedded-media artifacts.
-- [x] Deterministic `scripts/build_public_release.py` creates a sanitized source tree and `PUBLIC_RELEASE_MANIFEST.json`.
-- [x] Clean-history repository initialized from the sanitized tree and re-cloned successfully; history audit returned no blockers.
-- [x] Sanitized tree clean-install verification: Python **257 passed / 2 deselected**, Web **79/79**, Playwright **60/60**.
-- [x] Public reference-corpus fingerprint is stable when non-analysis OCR text is redacted.
+- [x] Public CSV/JSONL removes `thumb_text_content` and excludes raw lyric/subtitle/OCR text.
+- [x] Raw population/enumeration/batch logs remain private provenance.
+- [x] Pilot outputs and legacy self-contained HTML with embedded thumbnails are omitted from public source.
+- [x] `SECURITY.md`, `CONTRIBUTING.md`, `CITATION.cff`, `NOTICE`, package metadata, issue templates, PR template, and changelog added.
+- [x] Public release audit rejects secrets, private paths/networks, embedded media, unsafe dataset keys, and oversized source artifacts.
+- [x] Historical private repository audited; direct visibility flip was rejected because old commits contained private paths/OCR fields/embedded-media artifacts.
+- [x] Sanitized release builder works before package installation and does not inherit an ancestor Git repository.
+- [x] Strict source-file fingerprints remain exact; analysis corpus/PCA fingerprints exclude only non-analysis raw OCR text.
+- [x] Clean-history repository initialized from the sanitized tree, re-cloned, and audited with history result `{}`.
+- [x] Sanitized clean-install verification: Python **257 passed / 2 deselected**, Web **79/79**, Playwright **60/60**.
+- [x] Public source repository's own Python 3.12/3.13, Web, and `public-release` Actions jobs all passed before visibility changed to PUBLIC.
+- [x] Remote public clone re-audited: 84/93-column sanitized datasets, no raw population/pilot/base64 legacy artifacts, history `{}`.
+- [x] Private canonical origins on the notebook and MAIN PC were moved to `mv-analyzer-research-private` before the public name was reused.
+- [x] Public source repository is **PUBLIC**; private provenance repository remains **PRIVATE**.
+- [x] GitHub private vulnerability reporting, vulnerability alerts, and automated security fixes enabled on the public repository.
+- [x] Production manifest matched the canonical cutover source and production Playwright passed **60/60** after the public source link was deployed.
 
-## Remaining release gates
+## Ongoing release rule
 
-- [ ] Merge this cleanup through GitHub PR after Python 3.12/3.13, Web, and the new `public-release` CI job are all SUCCESS.
-- [ ] Regenerate the sanitized tree from the final merged master SHA and repeat clean-history audit.
-- [x] GitHub cutover topology selected: preserve the canonical provenance repository as PRIVATE `writingdeveloper/mv-analyzer-research-private`, then publish a **new clean-history** `writingdeveloper/mv-analyzer`.
-- [x] Final public cutover explicitly approved by the project owner in the release session.
-- [x] Web source-status implementation changed from the private placeholder to the public GitHub link; production deployment is gated until the public repository exists.
+Future public changes must follow this direction only:
 
-## Why direct PUBLIC is blocked
+```text
+PRIVATE provenance master
+  -> build_public_release.py
+  -> audit_public_release.py
+  -> clean public source commit
+  -> public CI
+```
 
-Deleting a file in the current `master` does not delete it from older commits or other refs. The history audit found historical local-path material, legacy base64-thumbnail HTML, and dataset/work versions containing `thumb_text_content`. No private-key/API-token hit was found in the implemented scanners, but privacy/copyright hygiene alone is sufficient to reject a direct visibility flip.
+Never merge or push the private provenance Git history into `writingdeveloper/mv-analyzer`. The public repository is a source distribution, not the raw research archive.
 
-See `docs/open-source-release.md` for the clean-history release model.
-
-## Product boundary
+## Scientific/product boundary
 
 Heavy MV analysis stays local. The hosted Web app displays public-safe static research snapshots and locally imported Analyze/Reason JSON; it does not provide server-side YouTube analysis and imported files are not designed to be uploaded. Reference-corpus percentile is descriptive and is not a market-wide percentile or success probability.

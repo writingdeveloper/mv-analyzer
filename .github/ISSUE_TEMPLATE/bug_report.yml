@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a reproducible problem in the CLI, analysis pipeline, or Web explorer.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include cookies, signed media URLs, private paths, API keys, or copyrighted media/lyric dumps."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest safe command or public-safe fixture that reproduces the issue.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: v0.2.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [CLI, Analysis pipeline, Reason Engine, Web explorer, Dataset/research, Documentation]
+    validations:
+      required: true
